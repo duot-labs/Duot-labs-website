@@ -117,9 +117,9 @@ function initSignalCanvas() {
     // Draw Primary Signal Waveform
     ctx.beginPath();
     ctx.lineWidth = 2.5;
-    ctx.strokeStyle = '#d4ff3a';
-    ctx.shadowColor = '#d4ff3a';
-    ctx.shadowBlur = 12;
+    ctx.strokeStyle = '#a78bfa';
+    ctx.shadowColor = '#7c4dff';
+    ctx.shadowBlur = 14;
 
     for (let x = 0; x < w; x++) {
       const y = h / 2 + 
@@ -136,7 +136,7 @@ function initSignalCanvas() {
     // Draw Secondary Echo Waveform
     ctx.beginPath();
     ctx.lineWidth = 1.5;
-    ctx.strokeStyle = 'rgba(0, 245, 160, 0.5)';
+    ctx.strokeStyle = 'rgba(56, 189, 248, 0.6)';
     for (let x = 0; x < w; x++) {
       const y = h / 2 + Math.sin((x * 0.015) - phase * 0.8) * 36;
       if (x === 0) ctx.moveTo(x, y);
@@ -156,7 +156,7 @@ function initSignalCanvas() {
 
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(212, 255, 58, ${p.alpha})`;
+      ctx.fillStyle = `rgba(167, 139, 250, ${p.alpha})`;
       ctx.fill();
     });
 
