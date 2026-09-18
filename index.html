@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Duot Labs — AI Growth Systems, Ad Intelligence & Software Studio</title>
+  <meta name="description" content="Duot Labs builds high-performance AI growth systems and advertising intelligence for ambitious teams, alongside proprietary decision software." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="theme-color" content="#08090D" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://duotlabs.com/" />
+  <meta property="og:title" content="Duot Labs — Attention that moves." />
+  <meta property="og:description" content="Duot Labs builds high-performance AI growth systems and advertising intelligence for ambitious teams, alongside proprietary decision software." />
+  <meta property="og:image" content="https://duotlabs.com/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Duot Labs — Attention that moves." />
+  <meta name="twitter:description" content="AI growth consulting for advertising teams and proprietary intelligent software." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Ambient Light Effects -->
+  <div class="ambient-glow-top" aria-hidden="true"></div>
+  <div class="ambient-grid-overlay" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-brand" aria-label="Duot Labs Home">
+        <img src="assets/logo.svg" alt="Duot Labs" class="brand-logo-img" />
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#consulting" class="nav-link">Ads Consulting</a></li>
+          <li><a href="#calculator" class="nav-link">ROAS Simulator</a></li>
+          <li><a href="#products" class="nav-link">Products</a></li>
+          <li><a href="#theses" class="nav-link">Lab Vectors</a></li>
+          <li><a href="#proof" class="nav-link">Results</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="status-indicator">
+          <span class="status-dot"></span>
+          <span>SYSTEM // ACTIVE</span>
+        </div>
+        <a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          Book Session
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="hero-pill">
+          <span class="status-dot"></span>
+          <span>00 // INDEPENDENT AI GROWTH & PRODUCT STUDIO</span>
+        </div>
+        <h1 class="hero-title">
+          Attention that <em>moves.</em><br />
+          Growth that <span class="gradient-text-lime">scales.</span>
+        </h1>
+        <p class="hero-desc">
+          Duot Labs engineers custom AI growth architectures for advertising teams and develops proprietary intelligent software designed to capture high-intent everyday attention.
+        </p>
+        <div class="hero-cta-group">
+          <a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+            Schedule 30-Min Strategy Call
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+          <button data-open-modal="briefModal" class="btn btn-secondary btn-lg">
+            Send Project Brief
+          </button>
+        </div>
+        <div class="hero-meta-strip">
+          <div class="hero-meta-item">
+            <span class="hero-meta-val">$18M<span>+</span></span>
+            <span class="hero-meta-lbl">Ad Spend Guided</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-val">4.2<span>x</span></span>
+            <span class="hero-meta-lbl">Creative Velocity</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-val">3<span>+</span></span>
+            <span class="hero-meta-lbl">Shipped AI Products</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visualizer / Live Signal Radar Console -->
+      <div class="hero-visual-card">
+        <div class="card-topbar">
+          <div class="topbar-controls">
+            <span class="control-dot red"></span>
+            <span class="control-dot yellow"></span>
+            <span class="control-dot green"></span>
+          </div>
+          <div class="topbar-title">DUOT_SIGNAL_STREAM // v2.4</div>
+          <div class="topbar-status">24/7 CAPI FEED</div>
+        </div>
+        <div class="radar-body">
+          <div class="canvas-wrap">
+            <canvas id="signalCanvas"></canvas>
+          </div>
+          <div class="radar-telemetry">
+            <div class="telemetry-block">
+              <div class="telemetry-title">Signal Clarity</div>
+              <div class="telemetry-value" id="telemetrySpend">98.6%</div>
+              <div class="telemetry-sub">+14.2% uplift</div>
+            </div>
+            <div class="telemetry-block">
+              <div class="telemetry-title">Event Latency</div>
+              <div class="telemetry-value" id="telemetryLatency">18ms</div>
+              <div class="telemetry-sub">Zero dropouts</div>
+            </div>
+            <div class="telemetry-block">
+              <div class="telemetry-title">Vector Mode</div>
+              <div class="telemetry-value" style="color: var(--accent-emerald);">ACTIVE</div>
+              <div class="telemetry-sub">Meta / TikTok / Google</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Ticker Strip -->
+  <div class="ticker-strip" aria-hidden="true">
+    <div class="ticker-track">
+      <div class="ticker-item"><span>// SIGNAL DISCOVERY</span> <span class="ticker-sep">●</span> <b>FIRST-PARTY CAPI PIPELINES</b></div>
+      <div class="ticker-item"><span>// CREATIVE ENGINES</span> <span class="ticker-sep">●</span> <b>PROGRAMMATIC HOOK TESTING</b></div>
+      <div class="ticker-item"><span>// MARQUE.LIVE</span> <span class="ticker-sep">●</span> <b>CREATOR INTELLIGENCE PLATFORM</b></div>
+      <div class="ticker-item"><span>// BARGANE</span> <span class="ticker-sep">●</span> <b>AI BUYING DECISIONS ON APP STORE</b></div>
+      <div class="ticker-item"><span>// PRICESCOUTER AI</span> <span class="ticker-sep">●</span> <b>REAL-TIME MULTI-SOURCE PRICE RADAR</b></div>
+      <div class="ticker-item"><span>// SIGNAL DISCOVERY</span> <span class="ticker-sep">●</span> <b>FIRST-PARTY CAPI PIPELINES</b></div>
+      <div class="ticker-item"><span>// CREATIVE ENGINES</span> <span class="ticker-sep">●</span> <b>PROGRAMMATIC HOOK TESTING</b></div>
+      <div class="ticker-item"><span>// MARQUE.LIVE</span> <span class="ticker-sep">●</span> <b>CREATOR INTELLIGENCE PLATFORM</b></div>
+      <div class="ticker-item"><span>// BARGANE</span> <span class="ticker-sep">●</span> <b>AI BUYING DECISIONS ON APP STORE</b></div>
+      <div class="ticker-item"><span>// PRICESCOUTER AI</span> <span class="ticker-sep">●</span> <b>REAL-TIME MULTI-SOURCE PRICE RADAR</b></div>
+    </div>
+  </div>
+
+  <!-- Ads & Growth Consulting Section -->
+  <section id="consulting" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">CONSULTING & GROWTH SYSTEMS</div>
+        <h2 class="section-title">Algorithmic precision for <span class="gradient-text-lime">modern advertising.</span></h2>
+        <p class="section-desc">
+          Most marketing teams bleed spend on creative fatigue, fractured tracking, and slow iteration cycles. We engineer the infrastructure, automated workflows, and intelligence models that turn paid channels into predictable growth engines.
+        </p>
+      </div>
+
+      <div class="consulting-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-header">
+            <span class="service-code">C/01</span>
+            <div class="service-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+          </div>
+          <h3 class="service-title">Signal Engineering & Server-Side Tracking</h3>
+          <p class="service-description">
+            Build resilient first-party data loops. We deploy server-side Conversions API (CAPI), cookieless attribution tracking, and custom decay models that feed ad platform algorithms clean, uncorrupted purchase signal.
+          </p>
+          <ul class="service-features">
+            <li class="service-feature-item"><span class="feature-check">✓</span> Full Meta CAPI & Google Offline Conversion pipelines</li>
+            <li class="service-feature-item"><span class="feature-check">✓</span> Cookieless event tracking & cross-device matching</li>
+            <li class="service-feature-item"><span class="feature-check">✓</span> Custom cohort decay & LTV attribution modeling</li>
+          </ul>
+          <div class="service-footer">
+            <span class="service-tag">DELIVERABLE: ZERO SIGNAL LOSS</span>
+            <a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="btn btn-outline-lime btn-sm">Consult on CAPI →</a>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-header">
+            <span class="service-code">C/02</span>
+            <div class="service-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+          </div>
+          <h3 class="service-title">AI Creative Velocity & Rapid Hook Testing</h3>
+          <p class="service-description">
+            Creative is the new targeting. We implement automated asset generation systems that test dozens of hooks, angles, and visual variations every week, automatically identifying winning creative signals before scaling budget.
+          </p>
+          <ul class="service-features">
+            <li class="service-feature-item"><span class="feature-check">✓</span> High-frequency programmatic hook & script matrix</li>
+            <li class="service-feature-item"><span class="feature-check">✓</span> Automated video rendition & AI voiceover variations</li>
+            <li class="service-feature-item"><span class="feature-check">✓</span> Statistical winner selection & fatigue alarm triggers</li>
+          </ul>
+          <div class="service-footer">
+            <span class="service-tag">DELIVERABLE: 4.2X ASSET OUTPUT</span>
+            <a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="btn btn-outline-lime btn-sm">Scale Creatives →</a>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-header">
+            <span class="service-code">C/03</span>
+            <div class="service-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            </div>
+          </div>
+          <h3 class="service-title">Paid Acquisition Architecture & Scaling</h3>
+          <p class="service-description">
+            Full-funnel campaign architecture designed for aggressive horizontal and vertical scale across Meta, TikTok, YouTube, and Google Search without crashing ROAS or triggering bid volatility.
+          </p>
+          <ul class="service-features">
+            <li class="service-feature-item"><span class="feature-check">✓</span> Algorithmic campaign structures (Advantage+, ASC, PMax)</li>
+            <li class="service-feature-item"><span class="feature-check">✓</span> Dynamic bidding rules and budget pacing algorithms</li>
+            <li class="service-feature-item"><span class="feature-check">✓</span> Landing page signal optimization & pre-checkout tests</li>
+          </ul>
+          <div class="service-footer">
+            <span class="service-tag">DELIVERABLE: PROFITABLE SCALE</span>
+            <a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="btn btn-outline-lime btn-sm">Audit Campaigns →</a>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-header">
+            <span class="service-code">C/04</span>
+            <div class="service-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+          </div>
+          <h3 class="service-title">Bespoke Growth Tooling & AI Micro-Agents</h3>
+          <p class="service-description">
+            We code custom internal tools for marketing teams: automated Slack alerts for ad fatigue, competitor creative crawlers, and custom AI agents that draft ad copy and summarize performance reports daily.
+          </p>
+          <ul class="service-features">
+            <li class="service-feature-item"><span class="feature-check">✓</span> Custom Slack & Discord automated anomaly monitors</li>
+            <li class="service-feature-item"><span class="feature-check">✓</span> Automated competitor ad library scraping & intelligence</li>
+            <li class="service-feature-item"><span class="feature-check">✓</span> LLM-powered creative brief and script generators</li>
+          </ul>
+          <div class="service-footer">
+            <span class="service-tag">DELIVERABLE: BESPOKE AI WORKFLOWS</span>
+            <a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="btn btn-outline-lime btn-sm">Build Tooling →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive ROI & Signal Impact Simulator -->
+  <section id="calculator" class="section" style="padding-top: 20px;">
+    <div class="container">
+      <div class="calc-card">
+        <div class="calc-inputs">
+          <div>
+            <div class="section-pill">SIMULATION ENGINE</div>
+            <h2 style="font-size: 2rem; margin-bottom: 8px;">Ad Signal & Growth Impact Calculator</h2>
+            <p style="font-size: 0.95rem; margin-bottom: 24px;">
+              Estimate the efficiency gains and incremental revenue unlocked by deploying Duot Labs AI creative velocity and signal optimization models.
+            </p>
+          </div>
+
+          <div class="calc-group">
+            <div class="calc-label-row">
+              <span class="calc-label">Monthly Ad Spend</span>
+              <span class="calc-value-badge" id="calcSpendVal">$50,000</span>
+            </div>
+            <input type="range" class="calc-slider" id="calcSpend" min="5000" max="250000" step="5000" value="50000" />
+          </div>
+
+          <div class="calc-group">
+            <div class="calc-label-row">
+              <span class="calc-label">Current Blended ROAS</span>
+              <span class="calc-value-badge" id="calcRoasVal">2.2x</span>
+            </div>
+            <input type="range" class="calc-slider" id="calcRoas" min="1.0" max="6.0" step="0.1" value="2.2" />
+          </div>
+
+          <div class="calc-group">
+            <div class="calc-label-row">
+              <span class="calc-label">Weekly Creative Iterations</span>
+              <span class="calc-value-badge" id="calcCreativeVal">5 ads/wk</span>
+            </div>
+            <input type="range" class="calc-slider" id="calcCreative" min="2" max="30" step="1" value="5" />
+          </div>
+        </div>
+
+        <div class="calc-results-card">
+          <div class="result-item">
+            <span class="result-label">Projected Wasted Spend Recovered</span>
+            <span class="result-value lime" id="resSavings">$13,000/mo</span>
+            <span class="result-desc">Eliminating creative fatigue burn & degraded attribution signal</span>
+          </div>
+
+          <div class="result-item">
+            <span class="result-label">Projected Incremental Annual Revenue</span>
+            <span class="result-value emerald" id="resRevenue">+$541,200/yr</span>
+            <span class="result-desc">Driven by higher conversion density and algorithmic scaling</span>
+          </div>
+
+          <div class="result-item">
+            <span class="result-label">Creative Velocity Uplift</span>
+            <span class="result-value cyan" id="resVelocity">21 ads/wk (+320%)</span>
+            <span class="result-desc">Programmatic angle & variation pipeline throughput</span>
+          </div>
+
+          <div style="margin-top: 8px;">
+            <a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+              Unlock This Growth Vector →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Matrix Section -->
+  <section id="products" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">PROPRIETARY SOFTWARE</div>
+        <h2 class="section-title">Software that earns a place in the <span class="gradient-text-cyan">everyday.</span></h2>
+        <p class="section-desc">
+          Alongside consulting for world-class growth teams, Duot Labs conceives, builds, and scales intelligent consumer and enterprise AI applications.
+        </p>
+      </div>
+
+      <div class="products-grid">
+        <!-- Product 1: Marque -->
+        <div class="product-card featured">
+          <div>
+            <div class="product-top">
+              <span class="product-code">P/01 // PLATFORM</span>
+              <span class="product-badge">LIVE PLATFORM</span>
+            </div>
+            <div class="product-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="product-name">Marque</h3>
+            <div class="product-category">Creator Intelligence & Outreach</div>
+            <p class="product-summary">
+              Semantic scouting, assisted creator outreach, and audience chemistry analysis for brands building scalable influence campaigns.
+            </p>
+            <div class="product-tags">
+              <span class="product-tag-pill">Semantic Search</span>
+              <span class="product-tag-pill">Automated Outreach</span>
+              <span class="product-tag-pill">Audience Chemistry</span>
+            </div>
+          </div>
+          <div>
+            <a href="https://marque.live/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+              Launch Marque.live
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 2: Bargane -->
+        <div class="product-card">
+          <div>
+            <div class="product-top">
+              <span class="product-code">P/02 // iOS APP</span>
+              <span class="product-badge">APP STORE</span>
+            </div>
+            <div class="product-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            </div>
+            <h3 class="product-name">Bargane</h3>
+            <div class="product-category">Decision Intelligence</div>
+            <p class="product-summary">
+              A focused, streamlined iOS application for making sharper, data-backed buying decisions with intelligent value verification.
+            </p>
+            <div class="product-tags">
+              <span class="product-tag-pill">iOS Native</span>
+              <span class="product-tag-pill">Decision Graph</span>
+              <span class="product-tag-pill">Commerce AI</span>
+            </div>
+          </div>
+          <div>
+            <a href="https://apps.apple.com/us/app/bargane/id6760089931" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+              View on App Store
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 3: PriceScouter AI -->
+        <div class="product-card">
+          <div>
+            <div class="product-top">
+              <span class="product-code">P/03 // iOS APP</span>
+              <span class="product-badge">APP STORE</span>
+            </div>
+            <div class="product-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <h3 class="product-name">PriceScouter AI</h3>
+            <div class="product-category">Price Intelligence & Radar</div>
+            <p class="product-summary">
+              A faster, high-fidelity system to compare multi-channel price signals, deal histories, and value thresholds in real time.
+            </p>
+            <div class="product-tags">
+              <span class="product-tag-pill">Price Signals</span>
+              <span class="product-tag-pill">Real-Time Scraping</span>
+              <span class="product-tag-pill">Productivity</span>
+            </div>
+          </div>
+          <div>
+            <a href="https://apps.apple.com/us/app/pricescouter-ai/id6749451027" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+              View on App Store
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Theses / Field Vectors -->
+  <section id="theses" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">FIELD THESES & RESEARCH</div>
+        <h2 class="section-title">Inquiries into <span class="gradient-text-purple">algorithmic attention.</span></h2>
+        <p class="section-desc">
+          We investigate fundamental mechanics of user attention, signal decay, and autonomous growth cadence to stay ahead of platform shifts.
+        </p>
+      </div>
+
+      <div class="theses-grid">
+        <div class="thesis-card">
+          <div>
+            <div class="thesis-code">T/01 // ACTIVE VECTOR</div>
+            <h4 class="thesis-title">Signal Amplification</h4>
+            <p class="thesis-body">
+              Focusing creative attention where conversion density is highest, rather than chasing cheap, unengaged impression volume.
+            </p>
+          </div>
+          <div class="thesis-status">STATUS: DEPLOYED IN PROD</div>
+        </div>
+
+        <div class="thesis-card">
+          <div>
+            <div class="thesis-code">T/02 // OPEN INQUIRY</div>
+            <h4 class="thesis-title">Signal Persistence</h4>
+            <p class="thesis-body">
+              Studying which creative touches decay immediately and which compound over time across fragmented social discovery graphs.
+            </p>
+          </div>
+          <div class="thesis-status">STATUS: BENCHMARK STUDY</div>
+        </div>
+
+        <div class="thesis-card">
+          <div>
+            <div class="thesis-code">T/03 // FIELD MODEL</div>
+            <h4 class="thesis-title">Adaptive Cadence</h4>
+            <p class="thesis-body">
+              Exploring how growth systems can respond dynamically to market rhythm without becoming reactive, noisy, or budget-inefficient.
+            </p>
+          </div>
+          <div class="thesis-status">STATUS: ALGORITHMIC MODEL</div>
+        </div>
+
+        <div class="thesis-card">
+          <div>
+            <div class="thesis-code">T/04 // LAB PROTOTYPE</div>
+            <h4 class="thesis-title">Synthetic Hook Pre-flight</h4>
+            <p class="thesis-body">
+              Simulating audience attention retention on video hooks using vision-language models prior to live ad spend deployment.
+            </p>
+          </div>
+          <div class="thesis-status">STATUS: IN VITRO TESTING</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Proof & Measurable Outcomes -->
+  <section id="proof" class="section" style="padding-top: 20px;">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-pill">MEASURABLE IMPACT</div>
+        <h2 class="section-title">Built for the teams ready to move.</h2>
+        <p class="section-desc">
+          When the product is real, the signal is there, and the next move needs to be clearer. Here is what happens when our systems go live.
+        </p>
+      </div>
+
+      <div class="proof-grid">
+        <div class="proof-card">
+          <div class="proof-metric">+240%</div>
+          <div class="proof-label">Creative Throughput Velocity</div>
+          <p class="proof-desc">
+            Replaced manual creative bottleneck with automated variation pipeline, testing 35+ iterations weekly with zero agency overhead.
+          </p>
+        </div>
+
+        <div class="proof-card">
+          <div class="proof-metric">-38%</div>
+          <div class="proof-label">Customer Acquisition Cost (CAC)</div>
+          <p class="proof-desc">
+            Implemented clean CAPI server-side event tracking and signal decay filters, stopping budget waste on fatigued audience segments.
+          </p>
+        </div>
+
+        <div class="proof-card">
+          <div class="proof-metric">3.8x</div>
+          <div class="proof-label">Blended ROAS at 5x Scale</div>
+          <p class="proof-desc">
+            Scaled monthly ad budget from $20k to $110k while maintaining high return through Advantage+ algorithmic campaign restructuring.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner & Booking -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="section-pill" style="margin-bottom: 20px;">READY TO ACCELERATE?</div>
+        <h2 class="cta-title">Make your signal <span class="gradient-text-lime">impossible to ignore.</span></h2>
+        <p class="cta-desc">
+          Book a 30-minute strategy session with our team. We'll review your current ad performance, attribution telemetry, and identify your biggest growth leverage point.
+        </p>
+        <div class="cta-btn-group">
+          <a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+            Schedule 30 Minutes on Calendly
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+          <button data-open-modal="briefModal" class="btn btn-secondary btn-lg">
+            Submit Custom Brief
+          </button>
+        </div>
+        <div class="cta-meta-contacts">
+          <span>Direct Contact: <a href="mailto:info@duotlabs.com" class="cta-meta-link">info@duotlabs.com</a></span>
+          <span>•</span>
+          <span>Field Notes: <a href="https://www.youtube.com/@DuotLabs" target="_blank" rel="noopener noreferrer" class="cta-meta-link">YouTube @DuotLabs</a></span>
+          <span>•</span>
+          <span>GitHub: <a href="https://github.com/Ritabanm/Duot-labs-website" target="_blank" rel="noopener noreferrer" class="cta-meta-link">Ritabanm/Duot-labs-website</a></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <img src="assets/logo.svg" alt="Duot Labs" class="brand-logo-img" />
+          <p class="footer-tagline">
+            Independent AI growth & product studio. Attention that moves. Growth systems that scale.
+          </p>
+          <div class="status-indicator" style="width: fit-content;">
+            <span class="status-dot"></span>
+            <span>SYSTEM // NORMAL (24/7)</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Consulting</div>
+          <ul class="footer-links">
+            <li><a href="#consulting" class="footer-link">Signal Engineering</a></li>
+            <li><a href="#consulting" class="footer-link">Creative Velocity</a></li>
+            <li><a href="#consulting" class="footer-link">Paid Acquisition</a></li>
+            <li><a href="#consulting" class="footer-link">Custom AI Tooling</a></li>
+            <li><a href="#calculator" class="footer-link">ROAS Calculator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Products</div>
+          <ul class="footer-links">
+            <li><a href="https://marque.live/" target="_blank" rel="noopener noreferrer" class="footer-link">Marque Platform</a></li>
+            <li><a href="https://apps.apple.com/us/app/bargane/id6760089931" target="_blank" rel="noopener noreferrer" class="footer-link">Bargane iOS</a></li>
+            <li><a href="https://apps.apple.com/us/app/pricescouter-ai/id6749451027" target="_blank" rel="noopener noreferrer" class="footer-link">PriceScouter AI</a></li>
+            <li><a href="#theses" class="footer-link">Lab Inquiries</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Connect</div>
+          <ul class="footer-links">
+            <li><a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="footer-link">Book 30-Min Call</a></li>
+            <li><a href="mailto:info@duotlabs.com" class="footer-link">info@duotlabs.com</a></li>
+            <li><a href="https://www.youtube.com/@DuotLabs" target="_blank" rel="noopener noreferrer" class="footer-link">YouTube Channel</a></li>
+            <li><a href="https://github.com/Ritabanm/Duot-labs-website" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub Repository</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Duot Labs. All rights reserved. Independent growth & product studio.</div>
+        <div>Engineered for high-signal velocity.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Brief Modal -->
+  <div class="modal-overlay" id="briefModal" role="dialog" aria-modal="true" aria-labelledby="briefModalTitle">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="briefModalTitle">Submit Growth Brief</h3>
+        <button class="modal-close" data-close-modal aria-label="Close dialog">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="inquiryForm">
+          <div class="form-group">
+            <label class="form-label" for="clientName">Your Name / Company</label>
+            <input type="text" id="clientName" class="form-input" placeholder="e.g. Alex / Acme Inc" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="clientEmail">Work Email</label>
+            <input type="email" id="clientEmail" class="form-input" placeholder="alex@acme.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="serviceInterest">Area of Focus</label>
+            <select id="serviceInterest" class="form-select">
+              <option value="consulting">Ad Growth Consulting & Creative Velocity</option>
+              <option value="tracking">Server-Side CAPI & Attribution Engineering</option>
+              <option value="products">Enterprise AI Product / Marque Integration</option>
+              <option value="other">Bespoke Growth Tooling</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="clientNotes">Current Ad Spend & Objectives</label>
+            <textarea id="clientNotes" class="form-textarea" placeholder="Describe your monthly ad budget, core channels, and primary friction point..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            Send Brief to Duot Engineers →
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
