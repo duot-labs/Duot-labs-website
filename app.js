@@ -1,14 +1,156 @@
-/* ==========================================================================
-   DUOT LABS — INTERACTIVE APPLICATION LOGIC
-   ========================================================================== */
-
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
+  initHeroNetworkCanvas();
   initSignalCanvas();
   initProductCarousel();
   initModals();
   initTelemetryTicker();
 });
+
+/* --------------------------------------------------------------------------
+   Hero Dynamic Data Network Canvas
+   -------------------------------------------------------------------------- */
+function initHeroNetworkCanvas() {
+  const canvas = document.getElementById('heroNetworkCanvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let width, height;
+  let animationId;
+  let mouse = { x: null, y: null, radius: 140 };
+
+  function resize() {
+    const parent = canvas.parentElement;
+    width = canvas.width = parent.offsetWidth;
+    height = canvas.height = parent.offsetHeight;
+  }
+
+  window.addEventListener('resize', resize);
+  resize();
+
+  window.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+  });
+
+  window.addEventListener('mouseleave', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  const nodeCount = Math.min(Math.floor((width * height) / 18000), 55);
+  const nodes = [];
+  const packets = [];
+
+  for (let i = 0; i < nodeCount; i++) {
+    nodes.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.6,
+      vy: (Math.random() - 0.5) * 0.6,
+      radius: Math.random() * 2 + 1.5,
+      baseAlpha: Math.random() * 0.5 + 0.3
+    });
+  }
+
+  // Create periodic data packets pulsing between nodes
+  function createPacket(fromNode, toNode) {
+    packets.push({
+      from: fromNode,
+      to: toNode,
+      progress: 0,
+      speed: 0.008 + Math.random() * 0.012,
+      color: Math.random() > 0.4 ? '#00f0ff' : '#a78bfa'
+    });
+  }
+
+  let packetTimer = 0;
+
+  function render() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Update and draw nodes
+    for (let i = 0; i < nodes.length; i++) {
+      const n = nodes[i];
+      n.x += n.vx;
+      n.y += n.vy;
+
+      if (n.x < 0 || n.x > width) n.vx *= -1;
+      if (n.y < 0 || n.y > height) n.vy *= -1;
+
+      // Mouse influence
+      if (mouse.x !== null) {
+        const dx = mouse.x - n.x;
+        const dy = mouse.y - n.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < mouse.radius) {
+          const force = (mouse.radius - dist) / mouse.radius;
+          n.x -= (dx / dist) * force * 1.5;
+          n.y -= (dy / dist) * force * 1.5;
+        }
+      }
+
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(124, 77, 255, ${n.baseAlpha})`;
+      ctx.shadowColor = '#7c4dff';
+      ctx.shadowBlur = 8;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+
+      // Connect nearby nodes
+      for (let j = i + 1; j < nodes.length; j++) {
+        const n2 = nodes[j];
+        const dx = n.x - n2.x;
+        const dy = n.y - n2.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < 150) {
+          const alpha = (1 - dist / 150) * 0.22;
+          ctx.beginPath();
+          ctx.moveTo(n.x, n.y);
+          ctx.lineTo(n2.x, n2.y);
+          ctx.strokeStyle = `rgba(124, 77, 255, ${alpha})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+
+          // Chance to trigger packet transfer along this edge
+          if (packetTimer % 40 === 0 && Math.random() < 0.05 && packets.length < 15) {
+            createPacket(n, n2);
+          }
+        }
+      }
+    }
+
+    // Update and draw packets
+    for (let k = packets.length - 1; k >= 0; k--) {
+      const p = packets[k];
+      p.progress += p.speed;
+
+      if (p.progress >= 1) {
+        packets.splice(k, 1);
+        continue;
+      }
+
+      const px = p.from.x + (p.to.x - p.from.x) * p.progress;
+      const py = p.from.y + (p.to.y - p.from.y) * p.progress;
+
+      ctx.beginPath();
+      ctx.arc(px, py, 2.5, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.shadowColor = p.color;
+      ctx.shadowBlur = 10;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    packetTimer++;
+    animationId = requestAnimationFrame(render);
+  }
+
+  render();
+}
 
 /* --------------------------------------------------------------------------
    Product Carousel Controls

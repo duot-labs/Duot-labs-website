@@ -41,7 +41,7 @@
 
       <nav aria-label="Main Navigation">
         <ul class="nav-links">
-          <li><a href="systems.html" class="nav-link">Systems & Infra</a></li>
+          <li><a href="research.html" class="nav-link">Research</a></li>
           <li><a href="consulting.html" class="nav-link">Ads Consulting</a></li>
           <li><a href="products.html" class="nav-link">Products</a></li>
           <li><a href="team.html" class="nav-link">Team</a></li>
@@ -61,8 +61,12 @@
     </div>
   </header>
 
-  <!-- Hero Section (Clean & Centered) -->
+  <!-- Hero Section (Clean & Minimal with Dynamic Ambient Canvas) -->
   <section class="hero-section">
+    <div class="hero-bg-media" aria-hidden="true">
+      <canvas id="heroNetworkCanvas" class="hero-network-canvas"></canvas>
+      <div class="hero-video-overlay"></div>
+    </div>
     <div class="container hero-centered">
       <div class="hero-pill">
         <span>00 // INDEPENDENT ADS RESEARCH + PRODUCT STUDIO</span>
@@ -72,15 +76,15 @@
         Systems that <span class="gradient-text-purple">scale.</span>
       </h1>
       <p class="hero-desc">
-        Duot Labs is an independent studio. We engineer low-latency advertising infrastructure and event pipelines, solve hard technical problems for growth teams, and build focused software products.
+        Duot Labs is an independent studio. We engineer low-latency advertising infrastructure, solve technical growth challenges, and build focused software products.
       </p>
       <div class="hero-cta-group">
         <a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
           Schedule 30-Min Call
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
         </a>
-        <a href="systems.html" class="btn btn-secondary btn-lg">
-          Explore Systems & Infra
+        <a href="research.html" class="btn btn-secondary btn-lg">
+          Explore Research
         </a>
       </div>
     </div>
@@ -89,120 +93,92 @@
   <!-- Live Ticker Strip -->
   <div class="ticker-strip" aria-hidden="true">
     <div class="ticker-track">
-      <div class="ticker-item"><span>// AD SYSTEMS</span> <span class="ticker-sep">●</span> <b>REAL-TIME EVENT STREAMING & DATA PIPELINES</b></div>
+      <div class="ticker-item"><span>// RESEARCH</span> <span class="ticker-sep">●</span> <b>REAL-TIME EVENT STREAMING & DATA PIPELINES</b></div>
       <div class="ticker-item"><span>// AD TECH</span> <span class="ticker-sep">●</span> <b>SERVER-SIDE ATTRIBUTION & CAPI ARCHITECTURE</b></div>
       <div class="ticker-item"><span>// PAPERS TO PROD</span> <span class="ticker-sep">●</span> <b>COMPUTATIONAL ADVERTISING & AUCTION DYNAMICS</b></div>
       <div class="ticker-item"><span>// PRODUCTS</span> <span class="ticker-sep">●</span> <b>MARQUE, BARGANE, PRICESCOUTER, NEURAHABIT & IMPERICAL</b></div>
-      <div class="ticker-item"><span>// AD SYSTEMS</span> <span class="ticker-sep">●</span> <b>REAL-TIME EVENT STREAMING & DATA PIPELINES</b></div>
+      <div class="ticker-item"><span>// RESEARCH</span> <span class="ticker-sep">●</span> <b>REAL-TIME EVENT STREAMING & DATA PIPELINES</b></div>
       <div class="ticker-item"><span>// AD TECH</span> <span class="ticker-sep">●</span> <b>SERVER-SIDE ATTRIBUTION & CAPI ARCHITECTURE</b></div>
       <div class="ticker-item"><span>// PAPERS TO PROD</span> <span class="ticker-sep">●</span> <b>COMPUTATIONAL ADVERTISING & AUCTION DYNAMICS</b></div>
       <div class="ticker-item"><span>// PRODUCTS</span> <span class="ticker-sep">●</span> <b>MARQUE, BARGANE, PRICESCOUTER, NEURAHABIT & IMPERICAL</b></div>
     </div>
   </div>
 
-  <!-- Section 1: Systems & Infra Preview -->
+  <!-- What We Do: 3 Core Pillars -->
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <div class="section-pill">AD SYSTEMS & INFRASTRUCTURE</div>
-        <h2 class="section-title">Speed, throughput, and precision in <span class="gradient-text-purple">ad engineering.</span></h2>
+        <div class="section-pill">WHAT WE DO</div>
+        <h2 class="section-title">Built for speed, precision, <span class="gradient-text-purple">& utility.</span></h2>
         <p class="section-desc">
-          We profile and eliminate bottlenecks in real-time event streaming, auction scoring pipelines, and server-to-server conversion infrastructure.
+          Three focused pillars spanning systems research, growth engineering, and software products.
         </p>
       </div>
 
-      <div class="grid-2">
+      <div class="grid-3">
+        <!-- 01: Research & Systems -->
         <div class="feature-card">
           <div class="card-header-icon">
-            <span class="card-code">SYSTEMS 01</span>
+            <span class="card-code">PILLAR 01</span>
             <div class="icon-box">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
             </div>
           </div>
-          <h3 class="card-title">Latency & Pipeline Optimization</h3>
+          <h3 class="card-title">Research & Systems</h3>
           <p class="card-desc">
-            We profile and redesign bottlenecks in high-frequency event streaming, real-time auction scoring, and data routing to minimize P99 latency and eliminate dropped conversion signals.
+            We profile and optimize latency in high-frequency event streams, auction scoring pipelines, and implement academic papers into robust production software.
           </p>
-          <div class="card-footer">
-            <a href="systems.html" class="btn btn-outline-lime btn-sm">Read Systems Overview →</a>
+          <div class="card-footer" style="margin-top: auto; padding-top: 20px;">
+            <a href="research.html" class="btn btn-outline-lime btn-sm">Explore Research →</a>
           </div>
         </div>
 
+        <!-- 02: Technical Consulting -->
         <div class="feature-card">
           <div class="card-header-icon">
-            <span class="card-code">SYSTEMS 02</span>
-            <div class="icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-            </div>
-          </div>
-          <h3 class="card-title">Applying Research Papers to Ad Systems</h3>
-          <p class="card-desc">
-            We take algorithms from computational advertising, retrieval literature, and statistical attribution models and implement them into reliable, production-grade systems.
-          </p>
-          <div class="card-footer">
-            <a href="systems.html" class="btn btn-outline-lime btn-sm">Learn About Our Approach →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 2: Technical Ads Consulting Preview -->
-  <section class="section" style="padding-top: 20px;">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-pill">TECHNICAL AD CONSULTING</div>
-        <h2 class="section-title">Solving hard technical problems <span class="gradient-text-purple">in advertising.</span></h2>
-        <p class="section-desc">
-          We help growth teams fix broken server-side tracking, automate rapid creative hook testing, and scale paid spend profitably.
-        </p>
-      </div>
-
-      <div class="grid-2">
-        <div class="feature-card">
-          <div class="card-header-icon">
-            <span class="card-code">AD TECH 01</span>
+            <span class="card-code">PILLAR 02</span>
             <div class="icon-box">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
             </div>
           </div>
-          <h3 class="card-title">Server-Side Tracking & Attribution (CAPI)</h3>
+          <h3 class="card-title">Technical Consulting</h3>
           <p class="card-desc">
-            Stop losing 30% of your conversion data to browser ad blockers. We build direct server-to-server CAPI pipelines for Meta and Google to restore clean purchase signals.
+            Server-side CAPI tracking, custom marketing automation tooling, organic creator pipelines, and rapid creative hook testing for growth teams.
           </p>
-          <div class="card-footer">
-            <a href="consulting.html" class="btn btn-outline-lime btn-sm">Explore Ad Consulting →</a>
+          <div class="card-footer" style="margin-top: auto; padding-top: 20px;">
+            <a href="consulting.html" class="btn btn-outline-lime btn-sm">Explore Consulting →</a>
           </div>
         </div>
 
+        <!-- 03: Our Products -->
         <div class="feature-card">
           <div class="card-header-icon">
-            <span class="card-code">AD TECH 02</span>
+            <span class="card-code">PILLAR 03</span>
             <div class="icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
             </div>
           </div>
-          <h3 class="card-title">Creative Testing Systems & Automation</h3>
+          <h3 class="card-title">Software Products</h3>
           <p class="card-desc">
-            We build automated workflows that allow marketing teams to test dozens of video hooks and angles weekly, finding top-performing ads before scaling budget.
+            We build and ship focused software tools: Marque, Bargane, PriceScouter AI, NeuraHabit, and Imperical across web and Apple platforms.
           </p>
-          <div class="card-footer">
-            <a href="consulting.html" class="btn btn-outline-lime btn-sm">View Creative Testing →</a>
+          <div class="card-footer" style="margin-top: auto; padding-top: 20px;">
+            <a href="products.html" class="btn btn-outline-lime btn-sm">View All Products →</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 3: Products (5 Dynamic Scrollable Cards) -->
-  <section class="section">
+  <!-- Section: Products Track (5 Dynamic Scrollable Cards) -->
+  <section class="section" style="padding-top: 20px;">
     <div class="container">
       <div class="products-scroll-header">
         <div>
           <div class="section-pill">OUR PRODUCTS</div>
           <h2 class="section-title" style="margin-bottom: 8px;">Software we <span class="gradient-text-cyan">build and ship.</span></h2>
           <p class="section-desc">
-            Focused applications built to solve real friction in decision-making, creator outreach, education, and habit formation.
+            5 live applications built to solve real friction in decision-making, creator outreach, and learning.
           </p>
         </div>
         <div class="products-scroll-controls">
@@ -358,108 +334,23 @@
     </div>
   </section>
 
-  <!-- Section 4: Team Preview -->
-  <section class="section" style="padding-top: 20px;">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-pill">OUR TEAM</div>
-        <h2 class="section-title">Built by <span class="gradient-text-purple">engineers & builders.</span></h2>
-        <p class="section-desc">
-          Engineering rigor paired with creative direction and product vision.
-        </p>
-      </div>
-
-      <div class="grid-2">
-        <!-- Ritaban Mitra -->
-        <div class="team-card">
-          <div>
-            <div class="team-avatar-row">
-              <div class="team-avatar-fallback">RM</div>
-              <div class="team-meta">
-                <h3>Ritaban Mitra</h3>
-                <div class="team-role">Lead Research Engineer</div>
-              </div>
-            </div>
-            <p class="team-bio">
-              Leads systems research, low-latency computing, and infrastructure throughput optimization. Translates cutting-edge ML and computer science papers into high-performance production systems and advertising data pipelines.
-            </p>
-          </div>
-          <div>
-            <a href="https://www.linkedin.com/in/ritabanmitra" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.62 1.62 0 0 0-1.63 1.63c0 .9.73 1.63 1.63 1.63.9 0 1.63-.73 1.63-1.63A1.62 1.62 0 0 0 7.83 6.6Z"/></svg>
-              LinkedIn Profile →
-            </a>
-          </div>
-        </div>
-
-        <!-- Spencer Lee -->
-        <div class="team-card">
-          <div>
-            <div class="team-avatar-row">
-              <div class="team-avatar-fallback">SL</div>
-              <div class="team-meta">
-                <h3>Spencer Lee</h3>
-                <div class="team-role">Creative Director</div>
-              </div>
-            </div>
-            <p class="team-bio">
-              Drives creative strategy, product storytelling, and growth design. Combines visual direction with data-backed hook testing and creator intelligence to build ads and software that capture genuine everyday attention.
-            </p>
-          </div>
-          <div>
-            <a href="https://www.linkedin.com/in/spencer-lee-63076b229/" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.62 1.62 0 0 0-1.63 1.63c0 .9.73 1.63 1.63 1.63.9 0 1.63-.73 1.63-1.63A1.62 1.62 0 0 0 7.83 6.6Z"/></svg>
-              LinkedIn Profile →
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 5: Join Us Banner -->
-  <section class="section">
-    <div class="container">
-      <div class="join-banner">
-        <div class="section-pill" style="margin-bottom: 20px;">JOIN US</div>
-        <h2 class="join-title">Work with Duot Labs</h2>
-        <p class="join-desc">
-          We're always looking to collaborate with curious engineers and researchers who care about latency, systems performance, and building useful products.
-        </p>
-        <div class="join-btn-group">
-          <a href="join.html" class="btn btn-primary btn-lg">
-            See How to Join →
-          </a>
-          <a href="mailto:info@duotlabs.com?subject=Joining%20Duot%20Labs" class="btn btn-secondary btn-lg">
-            Email Us: info@duotlabs.com
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 6: Consultation / Strategy Call -->
+  <!-- Focused Consultation CTA Banner -->
   <section class="section">
     <div class="container">
       <div class="cta-banner">
         <div class="section-pill" style="margin-bottom: 20px;">LET'S TALK</div>
-        <h2 class="cta-title">Have a hard problem to solve?</h2>
+        <h2 class="cta-title">Have a hard technical problem to solve?</h2>
         <p class="cta-desc">
-          Whether you need technical consulting for your ad systems, want to optimize infrastructure latency, or want to explore working together, we'd love to chat.
+          Whether you need consulting on server-side tracking, marketing automation, or want to collaborate on systems engineering, let's connect.
         </p>
         <div class="cta-btn-group">
           <a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
             Schedule 30 Minutes on Calendly
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
-          <button data-open-modal="briefModal" class="btn btn-secondary btn-lg">
-            Send Quick Brief
-          </button>
-        </div>
-        <div class="cta-meta-contacts">
-          <span>Email: <a href="mailto:info@duotlabs.com" class="cta-meta-link">info@duotlabs.com</a></span>
-          <span>•</span>
-          <span>Field Notes: <a href="https://www.youtube.com/@DuotLabs" target="_blank" rel="noopener noreferrer" class="cta-meta-link">YouTube @DuotLabs</a></span>
+          <a href="mailto:info@duotlabs.com" class="btn btn-secondary btn-lg">
+            Email: info@duotlabs.com
+          </a>
         </div>
       </div>
     </div>
@@ -479,8 +370,8 @@
         <div>
           <div class="footer-heading">Focus Areas</div>
           <ul class="footer-links">
-            <li><a href="systems.html" class="footer-link">Systems & Infra</a></li>
-            <li><a href="systems.html" class="footer-link">Research Papers to Prod</a></li>
+            <li><a href="research.html" class="footer-link">Research</a></li>
+            <li><a href="research.html" class="footer-link">Papers to Production</a></li>
             <li><a href="consulting.html" class="footer-link">Ads Consulting</a></li>
             <li><a href="consulting.html" class="footer-link">CAPI & Attribution</a></li>
           </ul>
