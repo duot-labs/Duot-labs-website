@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Duot Labs — Systems Research, Ads Consulting & Software</title>
-  <meta name="description" content="Duot Labs is an independent research and product studio. We optimize latency and throughput in infrastructure systems, solve technical advertising problems, and build focused software." />
+  <meta name="description" content="Duot Labs is an independent studio. We optimize latency and throughput in infrastructure systems, solve technical advertising problems, and build focused software products." />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <meta name="theme-color" content="#090714" />
 
-  <!-- Open Graph / Social Sharing -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://duotlabs.com/" />
   <meta property="og:title" content="Duot Labs — Attention that moves." />
@@ -35,17 +35,17 @@
   <!-- Navigation Bar -->
   <header class="navbar">
     <div class="container nav-container">
-      <a href="#" class="nav-brand" aria-label="Duot Labs Home">
+      <a href="index.html" class="nav-brand" aria-label="Duot Labs Home">
         <img src="assets/logo.svg" alt="Duot Labs" class="brand-logo-img" />
       </a>
 
       <nav aria-label="Main Navigation">
         <ul class="nav-links">
-          <li><a href="#systems" class="nav-link">Systems & Infra</a></li>
-          <li><a href="#consulting" class="nav-link">Ads Consulting</a></li>
-          <li><a href="#products" class="nav-link">Products</a></li>
-          <li><a href="#team" class="nav-link">Team</a></li>
-          <li><a href="#join" class="nav-link">Join Us</a></li>
+          <li><a href="systems.html" class="nav-link">Systems & Infra</a></li>
+          <li><a href="consulting.html" class="nav-link">Ads Consulting</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="team.html" class="nav-link">Team</a></li>
+          <li><a href="join.html" class="nav-link">Join Us</a></li>
         </ul>
       </nav>
 
@@ -61,77 +61,40 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section (Clean & Centered) -->
   <section class="hero-section">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <div class="hero-pill">
-          <span>00 // INDEPENDENT RESEARCH + PRODUCT STUDIO</span>
-        </div>
-        <h1 class="hero-title">
-          Attention that <em>moves.</em><br />
-          Systems that <span class="gradient-text-purple">scale.</span>
-        </h1>
-        <p class="hero-desc">
-          Duot Labs is an independent studio. We optimize latency and throughput in infrastructure systems, solve hard technical problems for advertising teams, and build focused software products.
-        </p>
-        <div class="hero-cta-group">
-          <a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-            Schedule 30-Min Call
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-          </a>
-          <a href="#systems" class="btn btn-secondary btn-lg">
-            Explore What We Do
-          </a>
-        </div>
-        <div class="hero-meta-strip">
-          <div class="hero-meta-item">
-            <span class="hero-meta-val">&lt;20<span>ms</span></span>
-            <span class="hero-meta-lbl">Pipeline Latency</span>
-          </div>
-          <div class="hero-meta-item">
-            <span class="hero-meta-val">$18M<span>+</span></span>
-            <span class="hero-meta-lbl">Ad Spend Guided</span>
-          </div>
-          <div class="hero-meta-item">
-            <span class="hero-meta-val">3<span>+</span></span>
-            <span class="hero-meta-lbl">Shipped Products</span>
-          </div>
-        </div>
+    <div class="container hero-centered">
+      <div class="hero-pill">
+        <span>00 // INDEPENDENT RESEARCH + PRODUCT STUDIO</span>
       </div>
-
-      <!-- Hero Visualizer -->
-      <div class="hero-visual-card">
-        <div class="card-topbar">
-          <div class="topbar-controls">
-            <span class="control-dot red"></span>
-            <span class="control-dot yellow"></span>
-            <span class="control-dot green"></span>
-          </div>
-          <div class="topbar-title">DUOT_INFRA_STREAM // v2.4</div>
-          <div class="topbar-status">HIGH-THROUGHPUT FEED</div>
+      <h1 class="hero-title">
+        Attention that <em>moves.</em><br />
+        Systems that <span class="gradient-text-purple">scale.</span>
+      </h1>
+      <p class="hero-desc">
+        Duot Labs is an independent studio. We optimize latency and throughput in infrastructure systems, solve hard technical problems for advertising teams, and build focused software products.
+      </p>
+      <div class="hero-cta-group">
+        <a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+          Schedule 30-Min Call
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+        <a href="systems.html" class="btn btn-secondary btn-lg">
+          Explore Systems & Infra
+        </a>
+      </div>
+      <div class="hero-meta-strip">
+        <div class="hero-meta-item">
+          <span class="hero-meta-val">&lt;20<span>ms</span></span>
+          <span class="hero-meta-lbl">Infra Latency Target</span>
         </div>
-        <div class="radar-body">
-          <div class="canvas-wrap">
-            <canvas id="signalCanvas"></canvas>
-          </div>
-          <div class="radar-telemetry">
-            <div class="telemetry-block">
-              <div class="telemetry-title">Throughput</div>
-              <div class="telemetry-value" id="telemetrySpend">14.2k/s</div>
-              <div class="telemetry-sub">Optimized event flow</div>
-            </div>
-            <div class="telemetry-block">
-              <div class="telemetry-title">P99 Latency</div>
-              <div class="telemetry-value" id="telemetryLatency">14ms</div>
-              <div class="telemetry-sub">Low-overhead inference</div>
-            </div>
-            <div class="telemetry-block">
-              <div class="telemetry-title">Systems Status</div>
-              <div class="telemetry-value" style="color: var(--accent-cyan);">ONLINE</div>
-              <div class="telemetry-sub">Zero dropped events</div>
-            </div>
-          </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-val">$18M<span>+</span></span>
+          <span class="hero-meta-lbl">Ad Spend Guided</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-val">5<span></span></span>
+          <span class="hero-meta-lbl">Live Products</span>
         </div>
       </div>
     </div>
@@ -143,22 +106,22 @@
       <div class="ticker-item"><span>// RESEARCH</span> <span class="ticker-sep">●</span> <b>LATENCY & THROUGHPUT OPTIMIZATION</b></div>
       <div class="ticker-item"><span>// AD TECH</span> <span class="ticker-sep">●</span> <b>SERVER-SIDE ATTRIBUTION & CAPI</b></div>
       <div class="ticker-item"><span>// PAPERS TO PROD</span> <span class="ticker-sep">●</span> <b>APPLYING ML RESEARCH TO REAL SYSTEMS</b></div>
-      <div class="ticker-item"><span>// PRODUCTS</span> <span class="ticker-sep">●</span> <b>MARQUE, BARGANE & PRICESCOUTER AI</b></div>
+      <div class="ticker-item"><span>// PRODUCTS</span> <span class="ticker-sep">●</span> <b>MARQUE, BARGANE, PRICESCOUTER, NEURAHABIT & IMPERICAL</b></div>
       <div class="ticker-item"><span>// RESEARCH</span> <span class="ticker-sep">●</span> <b>LATENCY & THROUGHPUT OPTIMIZATION</b></div>
       <div class="ticker-item"><span>// AD TECH</span> <span class="ticker-sep">●</span> <b>SERVER-SIDE ATTRIBUTION & CAPI</b></div>
       <div class="ticker-item"><span>// PAPERS TO PROD</span> <span class="ticker-sep">●</span> <b>APPLYING ML RESEARCH TO REAL SYSTEMS</b></div>
-      <div class="ticker-item"><span>// PRODUCTS</span> <span class="ticker-sep">●</span> <b>MARQUE, BARGANE & PRICESCOUTER AI</b></div>
+      <div class="ticker-item"><span>// PRODUCTS</span> <span class="ticker-sep">●</span> <b>MARQUE, BARGANE, PRICESCOUTER, NEURAHABIT & IMPERICAL</b></div>
     </div>
   </div>
 
-  <!-- Section 1: Systems Research & Infra Optimization -->
-  <section id="systems" class="section">
+  <!-- Section 1: Systems & Infra Preview -->
+  <section class="section">
     <div class="container">
       <div class="section-header">
         <div class="section-pill">SYSTEMS RESEARCH & INFRASTRUCTURE</div>
         <h2 class="section-title">Speed and throughput <span class="gradient-text-purple">where it matters.</span></h2>
         <p class="section-desc">
-          We study latency and throughput optimization in modern computing infrastructure. We bridge the gap between academic computer science papers and production engineering.
+          We profile and eliminate latency bottlenecks in distributed computing, model inference, and high-frequency event streaming.
         </p>
       </div>
 
@@ -174,13 +137,8 @@
           <p class="card-desc">
             We profile and redesign bottlenecks in distributed pipelines, model inference, and real-time event streaming systems to reduce P99 latency and maximize compute throughput.
           </p>
-          <ul class="feature-bullets">
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Kernel and memory cache locality optimizations</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> High-frequency event ingestion and streaming architectures</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Distributed system profiling and tail-latency reduction</li>
-          </ul>
           <div class="card-footer">
-            <span class="mono" style="color: var(--text-muted);">FOCUS: HIGH-PERFORMANCE INFRA</span>
+            <a href="systems.html" class="btn btn-outline-lime btn-sm">Read Systems Overview →</a>
           </div>
         </div>
 
@@ -193,29 +151,24 @@
           </div>
           <h3 class="card-title">Applying Research Papers to Production</h3>
           <p class="card-desc">
-            Academic literature moves fast, but most teams struggle to implement new papers. We take state-of-the-art algorithms in ML, search, and retrieval systems and turn them into production software.
+            We take state-of-the-art algorithms from machine learning, search, and retrieval literature and implement them into reliable, testable production software.
           </p>
-          <ul class="feature-bullets">
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Semantic search, vector indexing, and embeddings retrieval</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Fast approximate algorithms for real-time ranking and filtering</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Converting theoretical architectures into clean, testable code</li>
-          </ul>
           <div class="card-footer">
-            <span class="mono" style="color: var(--text-muted);">FOCUS: PAPERS TO PRODUCTION</span>
+            <a href="systems.html" class="btn btn-outline-lime btn-sm">Learn About Our Approach →</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 2: Technical Consulting for Advertising Teams -->
-  <section id="consulting" class="section">
+  <!-- Section 2: Technical Ads Consulting Preview -->
+  <section class="section" style="padding-top: 20px;">
     <div class="container">
       <div class="section-header">
         <div class="section-pill">TECHNICAL AD CONSULTING</div>
         <h2 class="section-title">Solving hard technical problems <span class="gradient-text-purple">in advertising.</span></h2>
         <p class="section-desc">
-          Modern ad platforms operate as massive real-time auction and ML ranking systems. We help growth and ads engineering teams fix broken tracking, speed up creative testing, and scale profitably.
+          We help growth teams fix broken server-side tracking, automate rapid creative hook testing, and scale paid spend profitably.
         </p>
       </div>
 
@@ -229,15 +182,10 @@
           </div>
           <h3 class="card-title">Server-Side Tracking & Attribution (CAPI)</h3>
           <p class="card-desc">
-            Client-side pixels lose up to 30% of customer purchases due to browser ad blockers and iOS privacy restrictions. We build robust server-to-server tracking pipelines that restore clean data to your ad platforms.
+            Stop losing 30% of your conversion data to browser ad blockers. We build direct server-to-server CAPI pipelines for Meta and Google to restore clean purchase signals.
           </p>
-          <ul class="feature-bullets">
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Meta Conversions API (CAPI) & Google Offline Events</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> First-party event deduplication and zero signal loss</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Accurate CAC, LTV, and multi-touch attribution visibility</li>
-          </ul>
           <div class="card-footer">
-            <a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="btn btn-outline-lime btn-sm">Audit Your Tracking →</a>
+            <a href="consulting.html" class="btn btn-outline-lime btn-sm">Explore Ad Consulting →</a>
           </div>
         </div>
 
@@ -250,30 +198,25 @@
           </div>
           <h3 class="card-title">Creative Testing Systems & Automation</h3>
           <p class="card-desc">
-            Creative fatigue causes ad costs to spike. We build automated testing workflows that allow teams to test dozens of hooks, scripts, and angles weekly, finding top-performing ads before scaling budget.
+            We build automated workflows that allow marketing teams to test dozens of video hooks and angles weekly, finding top-performing ads before scaling budget.
           </p>
-          <ul class="feature-bullets">
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> High-velocity hook matrix and variation generation</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Early fatigue detection to cut dying ads automatically</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Custom Slack bots for real-time performance alerts</li>
-          </ul>
           <div class="card-footer">
-            <a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="btn btn-outline-lime btn-sm">Scale Creative Testing →</a>
+            <a href="consulting.html" class="btn btn-outline-lime btn-sm">View Creative Testing →</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 3: Products -->
-  <section id="products" class="section">
+  <!-- Section 3: Products (5 Dynamic Scrollable Cards) -->
+  <section class="section">
     <div class="container">
       <div class="products-scroll-header">
         <div>
           <div class="section-pill">OUR PRODUCTS</div>
           <h2 class="section-title" style="margin-bottom: 8px;">Software we <span class="gradient-text-cyan">build and ship.</span></h2>
           <p class="section-desc">
-            Focused applications built to solve specific friction points in decision-making, creator outreach, education, and habit formation.
+            Focused applications built to solve real friction in decision-making, creator outreach, education, and habit formation.
           </p>
         </div>
         <div class="products-scroll-controls">
@@ -429,14 +372,14 @@
     </div>
   </section>
 
-  <!-- Section 4: Team -->
-  <section id="team" class="section">
+  <!-- Section 4: Team Preview -->
+  <section class="section" style="padding-top: 20px;">
     <div class="container">
       <div class="section-header">
         <div class="section-pill">OUR TEAM</div>
         <h2 class="section-title">Built by <span class="gradient-text-purple">engineers & builders.</span></h2>
         <p class="section-desc">
-          We bring deep experience across machine learning systems, high-throughput infrastructure, ad tech architectures, and consumer software.
+          Engineering rigor paired with creative direction and product vision.
         </p>
       </div>
 
@@ -488,8 +431,8 @@
     </div>
   </section>
 
-  <!-- Section 5: Join Us -->
-  <section id="join" class="section">
+  <!-- Section 5: Join Us Banner -->
+  <section class="section">
     <div class="container">
       <div class="join-banner">
         <div class="section-pill" style="margin-bottom: 20px;">JOIN US</div>
@@ -497,13 +440,12 @@
         <p class="join-desc">
           We're always looking to collaborate with curious engineers and researchers who care about latency, systems performance, and building useful products.
         </p>
-        <p style="font-size: 1.05rem; color: #ffffff; margin-bottom: 32px; font-weight: 500;">
-          Send us an email telling us what you want to work on, what you've built, or a paper you're excited about.
-        </p>
         <div class="join-btn-group">
-          <a href="mailto:info@duotlabs.com?subject=Joining%20Duot%20Labs" class="btn btn-primary btn-lg">
+          <a href="join.html" class="btn btn-primary btn-lg">
+            See How to Join →
+          </a>
+          <a href="mailto:info@duotlabs.com?subject=Joining%20Duot%20Labs" class="btn btn-secondary btn-lg">
             Email Us: info@duotlabs.com
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
         </div>
       </div>
@@ -551,10 +493,10 @@
         <div>
           <div class="footer-heading">Focus Areas</div>
           <ul class="footer-links">
-            <li><a href="#systems" class="footer-link">Latency & Throughput</a></li>
-            <li><a href="#systems" class="footer-link">Research Papers to Prod</a></li>
-            <li><a href="#consulting" class="footer-link">CAPI & Attribution</a></li>
-            <li><a href="#consulting" class="footer-link">Creative Testing</a></li>
+            <li><a href="systems.html" class="footer-link">Systems & Infra</a></li>
+            <li><a href="systems.html" class="footer-link">Research Papers to Prod</a></li>
+            <li><a href="consulting.html" class="footer-link">Ads Consulting</a></li>
+            <li><a href="consulting.html" class="footer-link">CAPI & Attribution</a></li>
           </ul>
         </div>
 
@@ -564,6 +506,8 @@
             <li><a href="https://marque.live/" target="_blank" rel="noopener noreferrer" class="footer-link">Marque (Creator Outreach)</a></li>
             <li><a href="https://apps.apple.com/us/app/bargane/id6760089931" target="_blank" rel="noopener noreferrer" class="footer-link">Bargane (iOS App)</a></li>
             <li><a href="https://apps.apple.com/us/app/pricescouter-ai/id6749451027" target="_blank" rel="noopener noreferrer" class="footer-link">PriceScouter AI (iOS App)</a></li>
+            <li><a href="https://apps.apple.com/us/app/neurahabit/id6757574461" target="_blank" rel="noopener noreferrer" class="footer-link">NeuraHabit (iOS App)</a></li>
+            <li><a href="https://apps.apple.com/us/app/imperical/id6759636738" target="_blank" rel="noopener noreferrer" class="footer-link">Imperical (Vision/iOS)</a></li>
           </ul>
         </div>
 
@@ -572,7 +516,8 @@
           <ul class="footer-links">
             <li><a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="footer-link">Book 30-Min Call</a></li>
             <li><a href="mailto:info@duotlabs.com" class="footer-link">info@duotlabs.com</a></li>
-            <li><a href="#join" class="footer-link">Join Us</a></li>
+            <li><a href="team.html" class="footer-link">Our Team</a></li>
+            <li><a href="join.html" class="footer-link">Join Us</a></li>
             <li><a href="https://www.youtube.com/@DuotLabs" target="_blank" rel="noopener noreferrer" class="footer-link">YouTube Channel</a></li>
           </ul>
         </div>

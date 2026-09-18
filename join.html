@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Us — Duot Labs</title>
+  <meta name="description" content="Collaborate and build with Duot Labs. We're looking for engineers and researchers interested in low-latency systems and useful software." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="theme-color" content="#090714" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="ambient-glow-top" aria-hidden="true"></div>
+  <div class="ambient-grid-overlay" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Duot Labs Home">
+        <img src="assets/logo.svg" alt="Duot Labs" class="brand-logo-img" />
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="systems.html" class="nav-link">Systems & Infra</a></li>
+          <li><a href="consulting.html" class="nav-link">Ads Consulting</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="team.html" class="nav-link">Team</a></li>
+          <li><a href="join.html" class="nav-link active">Join Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          Book 30-Min Call
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container page-header-inner">
+      <div class="section-pill">COLLABORATE & BUILD</div>
+      <h1 class="page-title">Work with <span class="gradient-text-purple">Duot Labs.</span></h1>
+      <p class="page-intro">
+        We are an independent studio of builders and researchers. If you care deeply about systems performance, high-frequency pipelines, or shipping focused software, we'd love to hear from you.
+      </p>
+    </div>
+  </header>
+
+  <!-- What We Value -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+      <div class="grid-3" style="margin-bottom: 48px;">
+        <div class="feature-card">
+          <h2 class="card-title" style="font-size: 1.25rem;">Speed & Latency</h2>
+          <p class="card-desc">
+            We value engineers who care about how software actually runs on hardware — profiling, optimizing tail latency, and eliminating unnecessary compute layers.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h2 class="card-title" style="font-size: 1.25rem;">Research into Code</h2>
+          <p class="card-desc">
+            We enjoy reading academic papers and turning novel algorithmic insights into clean, production-ready software that solves concrete problems.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h2 class="card-title" style="font-size: 1.25rem;">Real Utility</h2>
+          <p class="card-desc">
+            Whether building consulting infrastructure for advertising clients or shipping iOS apps, we focus on tools that solve real daily friction.
+          </p>
+        </div>
+      </div>
+
+      <!-- Join Banner -->
+      <div class="join-banner">
+        <h2 class="join-title">How to get in touch</h2>
+        <p class="join-desc">
+          No formal resume filters or 6-round generic interview loops. Just send us an email telling us:
+        </p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; max-width: 500px; margin: 0 auto 32px; text-align: left; color: var(--text-secondary);">
+          <li style="display: flex; gap: 10px;"><span style="color: var(--accent-cyan); font-weight: 700;">1.</span> What you are excited to build or research.</li>
+          <li style="display: flex; gap: 10px;"><span style="color: var(--accent-cyan); font-weight: 700;">2.</span> Something impressive or interesting you've built in the past.</li>
+          <li style="display: flex; gap: 10px;"><span style="color: var(--accent-cyan); font-weight: 700;">3.</span> A research paper or technical problem currently on your mind.</li>
+        </ul>
+        <div class="join-btn-group">
+          <a href="mailto:info@duotlabs.com?subject=Working%20with%20Duot%20Labs" class="btn btn-primary btn-lg">
+            Email Us: info@duotlabs.com
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <img src="assets/logo.svg" alt="Duot Labs" class="brand-logo-img" />
+          <p class="footer-tagline">
+            Independent research and product studio. Infrastructure optimization, ad tech consulting, and useful software.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-heading">Focus Areas</div>
+          <ul class="footer-links">
+            <li><a href="systems.html" class="footer-link">Systems & Infra</a></li>
+            <li><a href="systems.html" class="footer-link">Research Papers to Prod</a></li>
+            <li><a href="consulting.html" class="footer-link">Ads Consulting</a></li>
+            <li><a href="consulting.html" class="footer-link">CAPI & Attribution</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Our Products</div>
+          <ul class="footer-links">
+            <li><a href="https://marque.live/" target="_blank" rel="noopener noreferrer" class="footer-link">Marque (Creator Outreach)</a></li>
+            <li><a href="https://apps.apple.com/us/app/bargane/id6760089931" target="_blank" rel="noopener noreferrer" class="footer-link">Bargane (iOS App)</a></li>
+            <li><a href="https://apps.apple.com/us/app/pricescouter-ai/id6749451027" target="_blank" rel="noopener noreferrer" class="footer-link">PriceScouter AI (iOS App)</a></li>
+            <li><a href="https://apps.apple.com/us/app/neurahabit/id6757574461" target="_blank" rel="noopener noreferrer" class="footer-link">NeuraHabit (iOS App)</a></li>
+            <li><a href="https://apps.apple.com/us/app/imperical/id6759636738" target="_blank" rel="noopener noreferrer" class="footer-link">Imperical (Vision/iOS)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Connect</div>
+          <ul class="footer-links">
+            <li><a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="footer-link">Book 30-Min Call</a></li>
+            <li><a href="mailto:info@duotlabs.com" class="footer-link">info@duotlabs.com</a></li>
+            <li><a href="team.html" class="footer-link">Our Team</a></li>
+            <li><a href="join.html" class="footer-link">Join Us</a></li>
+            <li><a href="https://www.youtube.com/@DuotLabs" target="_blank" rel="noopener noreferrer" class="footer-link">YouTube Channel</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Duot Labs. All rights reserved. Independent research & product studio.</div>
+        <div>Engineered for speed & utility.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
