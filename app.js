@@ -5,10 +5,29 @@
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initSignalCanvas();
-  initRoiCalculator();
+  initProductCarousel();
   initModals();
   initTelemetryTicker();
 });
+
+/* --------------------------------------------------------------------------
+   Product Carousel Controls
+   -------------------------------------------------------------------------- */
+function initProductCarousel() {
+  const track = document.getElementById('productsTrack');
+  const prevBtn = document.getElementById('productScrollPrev');
+  const nextBtn = document.getElementById('productScrollNext');
+
+  if (!track || !prevBtn || !nextBtn) return;
+
+  prevBtn.addEventListener('click', () => {
+    track.scrollBy({ left: -380, behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    track.scrollBy({ left: 380, behavior: 'smooth' });
+  });
+}
 
 /* --------------------------------------------------------------------------
    1. Navbar & Mobile Menu

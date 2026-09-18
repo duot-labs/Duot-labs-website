@@ -268,79 +268,162 @@
   <!-- Section 3: Products -->
   <section id="products" class="section">
     <div class="container">
-      <div class="section-header">
-        <div class="section-pill">SOFTWARE PRODUCTS</div>
-        <h2 class="section-title">Software we <span class="gradient-text-cyan">build and ship.</span></h2>
-        <p class="section-desc">
-          Alongside our technical consulting and research, we build and operate our own software products that solve real everyday friction.
-        </p>
+      <div class="products-scroll-header">
+        <div>
+          <div class="section-pill">OUR PRODUCTS</div>
+          <h2 class="section-title" style="margin-bottom: 8px;">Software we <span class="gradient-text-cyan">build and ship.</span></h2>
+          <p class="section-desc">
+            Focused applications built to solve specific friction points in decision-making, creator outreach, education, and habit formation.
+          </p>
+        </div>
+        <div class="products-scroll-controls">
+          <button class="scroll-btn" id="productScrollPrev" aria-label="Scroll left">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button class="scroll-btn" id="productScrollNext" aria-label="Scroll right">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
       </div>
 
-      <div class="grid-3">
-        <!-- Marque -->
-        <div class="feature-card">
-          <div>
-            <div class="card-header-icon">
-              <span class="card-code">PLATFORM</span>
-              <div class="icon-box">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-              </div>
-            </div>
-            <h3 class="card-title">Marque</h3>
-            <p class="card-desc">
-              Semantic creator intelligence and automated outreach platform. Helps brands find high-fit creators without manual searching.
-            </p>
-          </div>
-          <div style="margin-top: 24px;">
-            <a href="https://marque.live/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
-              Launch Marque.live
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </a>
-          </div>
-        </div>
+      <div class="products-scroll-wrapper">
+        <div class="products-scroll-track" id="productsTrack">
 
-        <!-- Bargane -->
-        <div class="feature-card">
-          <div>
-            <div class="card-header-icon">
-              <span class="card-code">IOS APP</span>
-              <div class="icon-box">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <!-- 1. Marque -->
+          <div class="product-scroll-card">
+            <div>
+              <img src="assets/marque.svg" alt="Marque Logo" class="product-app-icon" />
+              <div class="product-card-title-row">
+                <h3 class="product-card-name">Marque</h3>
+                <span class="product-type-tag">WEB PLATFORM</span>
+              </div>
+              <div class="product-info-block">
+                <div class="info-row">
+                  <span class="info-label">What it does:</span>
+                  <p class="info-text">Automated semantic talent scouting and assisted creator outreach for growth brands.</p>
+                </div>
+                <div class="info-row" style="margin-top: 6px;">
+                  <span class="info-label">Why it exists:</span>
+                  <p class="info-text">Eliminates manual DM grinding so marketing teams can scale high-performing UGC partnerships fast.</p>
+                </div>
               </div>
             </div>
-            <h3 class="card-title">Bargane</h3>
-            <p class="card-desc">
-              A focused consumer mobile app on iOS designed to help users make sharper, faster purchasing decisions without overthinking.
-            </p>
+            <div>
+              <a href="https://marque.live/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+                Launch Marque.live
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
           </div>
-          <div style="margin-top: 24px;">
-            <a href="https://apps.apple.com/us/app/bargane/id6760089931" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
-              View on App Store
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </a>
-          </div>
-        </div>
 
-        <!-- PriceScouter AI -->
-        <div class="feature-card">
-          <div>
-            <div class="card-header-icon">
-              <span class="card-code">IOS APP</span>
-              <div class="icon-box">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          <!-- 2. Bargane -->
+          <div class="product-scroll-card">
+            <div>
+              <img src="assets/bargane.jpg" alt="Bargane App Icon" class="product-app-icon" />
+              <div class="product-card-title-row">
+                <h3 class="product-card-name">Bargane</h3>
+                <span class="product-type-tag">IOS APP</span>
+              </div>
+              <div class="product-info-block">
+                <div class="info-row">
+                  <span class="info-label">What it does:</span>
+                  <p class="info-text">Your 24/7 personal AI communication and speech coach providing real-time voice feedback.</p>
+                </div>
+                <div class="info-row" style="margin-top: 6px;">
+                  <span class="info-label">Why it exists:</span>
+                  <p class="info-text">Gives founders and professionals judgment-free, honest practice to master high-stakes conversations.</p>
+                </div>
               </div>
             </div>
-            <h3 class="card-title">PriceScouter AI</h3>
-            <p class="card-desc">
-              Real-time multi-source price tracking and comparison tool for iOS that verifies deals before you buy.
-            </p>
+            <div>
+              <a href="https://apps.apple.com/us/app/bargane/id6760089931" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+                View on App Store
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
           </div>
-          <div style="margin-top: 24px;">
-            <a href="https://apps.apple.com/us/app/pricescouter-ai/id6749451027" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
-              View on App Store
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </a>
+
+          <!-- 3. PriceScouter AI -->
+          <div class="product-scroll-card">
+            <div>
+              <img src="assets/pricescouter.jpg" alt="PriceScouter AI App Icon" class="product-app-icon" />
+              <div class="product-card-title-row">
+                <h3 class="product-card-name">PriceScouter AI</h3>
+                <span class="product-type-tag">IOS APP</span>
+              </div>
+              <div class="product-info-block">
+                <div class="info-row">
+                  <span class="info-label">What it does:</span>
+                  <p class="info-text">Instant resale market value estimation and multi-store deal tracking from photos or search.</p>
+                </div>
+                <div class="info-row" style="margin-top: 6px;">
+                  <span class="info-label">Why it exists:</span>
+                  <p class="info-text">Stops buyers from overpaying and helps sellers price used electronics and items accurately.</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="https://apps.apple.com/us/app/pricescouter-ai/id6749451027" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+                View on App Store
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
           </div>
+
+          <!-- 4. NeuraHabit -->
+          <div class="product-scroll-card">
+            <div>
+              <img src="assets/neurahabit.jpg" alt="NeuraHabit App Icon" class="product-app-icon" />
+              <div class="product-card-title-row">
+                <h3 class="product-card-name">NeuraHabit</h3>
+                <span class="product-type-tag">IOS APP</span>
+              </div>
+              <div class="product-info-block">
+                <div class="info-row">
+                  <span class="info-label">What it does:</span>
+                  <p class="info-text">Cognitive routine builder that turns small micro-actions into permanent everyday habits.</p>
+                </div>
+                <div class="info-row" style="margin-top: 6px;">
+                  <span class="info-label">Why it exists:</span>
+                  <p class="info-text">Replaces rigid streak pressure with behavioral psychology so self-improvement habits actually stick.</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="https://apps.apple.com/us/app/neurahabit/id6757574461" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+                View on App Store
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 5. Imperical -->
+          <div class="product-scroll-card">
+            <div>
+              <img src="assets/imperical.jpg" alt="Imperical App Icon" class="product-app-icon" />
+              <div class="product-card-title-row">
+                <h3 class="product-card-name">Imperical</h3>
+                <span class="product-type-tag">VISION / IOS</span>
+              </div>
+              <div class="product-info-block">
+                <div class="info-row">
+                  <span class="info-label">What it does:</span>
+                  <p class="info-text">Immersive virtual reality science education simulations for K-12 students.</p>
+                </div>
+                <div class="info-row" style="margin-top: 6px;">
+                  <span class="info-label">Why it exists:</span>
+                  <p class="info-text">Makes abstract physics, biology, and chemistry concepts tangible through interactive 3D spatial learning.</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="https://apps.apple.com/us/app/imperical/id6759636738" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+                View on App Store
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
