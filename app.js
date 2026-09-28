@@ -176,7 +176,7 @@ function initProductCarousel() {
    -------------------------------------------------------------------------- */
 function initNavbar() {
   const navToggle = document.getElementById('navToggle');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-link, .nav-mobile-cta a');
 
   // Inject or retrieve backdrop element
   let backdrop = document.querySelector('.mobile-menu-backdrop');
@@ -189,15 +189,17 @@ function initNavbar() {
 
   function closeMobileMenu() {
     document.body.classList.remove('mobile-menu-open');
+    document.body.style.overflow = '';
     if (navToggle) {
       navToggle.setAttribute('aria-expanded', 'false');
     }
   }
 
   function toggleMobileMenu() {
-    const isExpanded = document.body.classList.toggle('mobile-menu-open');
+    const isOpen = document.body.classList.toggle('mobile-menu-open');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
     if (navToggle) {
-      navToggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     }
   }
 
@@ -220,6 +222,13 @@ function initNavbar() {
   // Close on Escape key press
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && document.body.classList.contains('mobile-menu-open')) {
+      closeMobileMenu();
+    }
+  });
+
+  // Reset menu on desktop resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && document.body.classList.contains('mobile-menu-open')) {
       closeMobileMenu();
     }
   });
