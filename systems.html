@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research — Duot Labs</title>
-  <meta name="description" content="Latency and throughput engineering for advertising systems, real-time event streaming pipelines, and translating computational ad research into production." />
+  <meta name="description" content="Hard systems infrastructure research for high-performance computing and artificial intelligence: hardware-software co-design, memory & caching runtimes, and execution engines." />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <meta name="theme-color" content="#090714" />
 
@@ -61,9 +61,9 @@
   <header class="page-header">
     <div class="container page-header-inner">
       <div class="section-pill">RESEARCH & SYSTEMS</div>
-      <h1 class="page-title">Low latency, high throughput, <span class="gradient-text-purple">built for ads.</span></h1>
+      <h1 class="page-title">Hard systems infrastructure for <span class="gradient-text-purple">HPC & AI.</span></h1>
       <p class="page-intro">
-        We engineer high-performance infrastructure for advertising ecosystems: real-time event streaming, low-latency auction and scoring engines, and robust server-side data pipelines.
+        Duot Labs is an independent research studio building hard systems infrastructure for high-performance computing and artificial intelligence. We focus on hardware-software co-design, memory and caching runtimes, and high-throughput execution engines. Rather than building surface-level applications, our research targets the core computational bottlenecks of modern systems—optimizing memory bandwidth, reducing inference latency, and maximizing hardware utilization from edge robotics to large-scale LLM deployment.
       </p>
     </div>
   </header>
@@ -73,7 +73,7 @@
     <div class="container">
       <div class="grid-2">
 
-        <!-- 01: Latency & Tail Optimization -->
+        <!-- 01: Hardware-Software Co-Design -->
         <div class="feature-card">
           <div class="card-header-icon">
             <span class="card-code">SYSTEMS 01</span>
@@ -81,18 +81,18 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
             </div>
           </div>
-          <h2 class="card-title">P99 Latency & Tail Optimization</h2>
+          <h2 class="card-title">Hardware-Software Co-Design</h2>
           <p class="card-desc">
-            In real-time ad serving and bidding systems, tail latency causes missed auction deadlines and wasted spend. We profile down to memory allocation, event loops, and payload serialization to eliminate latency spikes.
+            Designing unified architectures where compiler passes, custom GPU kernels, and underlying silicon constraints interact directly to maximize FLOP utilization and compute efficiency.
           </p>
           <ul class="feature-bullets">
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Non-blocking async I/O architectures for multi-thousand RPS streams</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Tail-latency suppression for real-time scoring and ranking</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Zero-copy payload parsing and optimized serialization</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Custom CUDA/Triton kernels for non-standard attention mechanisms and quantized operators</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Micro-architectural profiling & hardware performance counter telemetry</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Heterogeneous accelerator orchestration across GPU, NPU, and edge hardware</li>
           </ul>
         </div>
 
-        <!-- 02: Research Papers to Production -->
+        <!-- 02: Memory & Caching Runtimes -->
         <div class="feature-card">
           <div class="card-header-icon">
             <span class="card-code">SYSTEMS 02</span>
@@ -100,37 +100,37 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
             </div>
           </div>
-          <h2 class="card-title">Computational Ads Papers to Production</h2>
+          <h2 class="card-title">Memory & Caching Runtimes</h2>
           <p class="card-desc">
-            We study academic research in auction mechanics, multi-touch attribution models, and dynamic pacing, implementing theoretical algorithms into robust, deterministic production software.
+            Targeting memory bandwidth as the primary bottleneck in modern LLM deployment and high-throughput vector processing through intelligent memory layout and zero-copy runtimes.
           </p>
           <ul class="feature-bullets">
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Auction theory and dynamic budget pacing implementations</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Statistical incrementality and multi-touch attribution algorithms</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Deterministic test suites with fuzzing and high-throughput benchmarks</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> KV-cache compression, paging algorithms, and dynamic memory allocation runtimes</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Zero-copy payload parsing and shared-memory inter-process communication</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> High-bandwidth memory (HBM) layout optimization for massive model context windows</li>
           </ul>
         </div>
 
-        <!-- 03: Real-Time Event Ingestion -->
+        <!-- 03: High-Throughput Execution Engines -->
         <div class="feature-card">
           <div class="card-header-icon">
             <span class="card-code">SYSTEMS 03</span>
             <div class="icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path></svg>
             </div>
           </div>
-          <h2 class="card-title">High-Throughput Real-Time Event Ingestion</h2>
+          <h2 class="card-title">High-Throughput Execution Engines</h2>
           <p class="card-desc">
-            Ad data pipelines must process millions of conversion, click, and interaction events without dropping packets or double-counting transactions. We build fault-tolerant ingestion pipelines.
+            Building low-overhead, concurrent execution runtimes engineered for deterministic low latency and extreme throughput across distributed compute clusters.
           </p>
           <ul class="feature-bullets">
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Deduplicated first-party server-side event streaming & queuing</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Real-time stream partitioning, anomaly detection, and failover</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Globally distributed edge routing for low-latency ingest</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Asynchronous, non-blocking I/O engines for multi-thousand RPS inference streams</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> P99 tail-latency suppression for real-time scoring and autonomous control loops</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Lock-free data structures and vectorized stream processing pipelines</li>
           </ul>
         </div>
 
-        <!-- 04: Server-Side Conversion Pipelines -->
+        <!-- 04: Edge Robotics to LLM Deployment -->
         <div class="feature-card">
           <div class="card-header-icon">
             <span class="card-code">SYSTEMS 04</span>
@@ -138,14 +138,14 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
             </div>
           </div>
-          <h2 class="card-title">Server-Side Conversion Architecture</h2>
+          <h2 class="card-title">Edge Robotics to LLM Deployment</h2>
           <p class="card-desc">
-            We build resilient server-to-server data pipelines (CAPI, webhook routers, event dispatchers) that feed ad platforms verified first-party purchase signals reliably.
+            Eliminating compute bottlenecks across the full hardware spectrum—from real-time, low-power edge robotics and spatial vision to multi-node LLM serving infrastructure.
           </p>
           <ul class="feature-bullets">
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Resilient batching, backoff, and retry workers for 3rd-party ad APIs</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> First-party customer data hashing and strict schema validation</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> High-availability serverless and containerized deployment topologies</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Low-latency spatial vision & sensor telemetry runtimes for edge hardware</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Distributed tensor & pipeline parallelism for large-scale model serving</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> High-availability failover, dynamic load balancing, and edge-to-cloud routing</li>
           </ul>
         </div>
 
@@ -157,10 +157,10 @@
   <section class="section">
     <div class="container">
       <div class="cta-banner">
-        <div class="section-pill" style="margin-bottom: 20px;">ENGINEERING COLLABORATION</div>
-        <h2 class="cta-title">Need to optimize your ad infrastructure?</h2>
+        <div class="section-pill" style="margin-bottom: 20px;">RESEARCH COLLABORATION</div>
+        <h2 class="cta-title">Tackling compute bottlenecks in your stack?</h2>
         <p class="cta-desc">
-          Let's talk through your event throughput bottlenecks, attribution pipelines, or the technical challenges in your advertising stack.
+          Let's discuss hardware-software optimization, memory runtimes, or high-throughput execution challenges in your HPC or AI infrastructure.
         </p>
         <div class="cta-btn-group">
           <a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
@@ -182,17 +182,17 @@
         <div class="footer-brand-col">
           <img src="assets/logo.svg" alt="Duot Labs" class="brand-logo-img" />
           <p class="footer-tagline">
-            Independent research and product studio. Infrastructure optimization, ad tech consulting, and useful software.
+            Independent research studio building hard systems infrastructure for high-performance computing and artificial intelligence.
           </p>
         </div>
 
         <div>
           <div class="footer-heading">Focus Areas</div>
           <ul class="footer-links">
-            <li><a href="research.html" class="footer-link">Research</a></li>
-            <li><a href="research.html" class="footer-link">Papers to Production</a></li>
-            <li><a href="consulting.html" class="footer-link">Ads Consulting</a></li>
-            <li><a href="consulting.html" class="footer-link">CAPI & Attribution</a></li>
+            <li><a href="research.html" class="footer-link">Research & Systems</a></li>
+            <li><a href="research.html" class="footer-link">Hardware-Software Co-Design</a></li>
+            <li><a href="research.html" class="footer-link">Memory & Caching Runtimes</a></li>
+            <li><a href="research.html" class="footer-link">Execution Engines</a></li>
           </ul>
         </div>
 
@@ -221,7 +221,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 Duot Labs. All rights reserved. Independent research & product studio.</div>
+        <div>© 2026 Duot Labs. All rights reserved. Independent research studio.</div>
         <div>Engineered for speed & utility.</div>
       </div>
     </div>
@@ -230,3 +230,4 @@
   <script src="app.js"></script>
 </body>
 </html>
+
