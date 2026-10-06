@@ -8,38 +8,41 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* --------------------------------------------------------------------------
-   Hero Dynamic Data Network Canvas
+   Hero Dynamic Data Network Canvas (Optimized 60FPS)
    -------------------------------------------------------------------------- */
 function initHeroNetworkCanvas() {
   const canvas = document.getElementById('heroNetworkCanvas');
   if (!canvas) return;
 
-  const ctx = canvas.getContext('2d');
-  let width, height;
-  let animationId;
-  let mouse = { x: null, y: null, radius: 140 };
+  const ctx = canvas.getContext('2d', { alpha: true });
+  let width = 0, height = 0;
+  let animationId = null;
+  let isVisible = true;
+  let mouse = { x: null, y: null, radius: 140, radiusSq: 19600 };
 
   function resize() {
     const parent = canvas.parentElement;
+    if (!parent) return;
     width = canvas.width = parent.offsetWidth;
     height = canvas.height = parent.offsetHeight;
   }
 
-  window.addEventListener('resize', resize);
+  window.addEventListener('resize', resize, { passive: true });
   resize();
 
   window.addEventListener('mousemove', (e) => {
+    if (!isVisible) return;
     const rect = canvas.getBoundingClientRect();
     mouse.x = e.clientX - rect.left;
     mouse.y = e.clientY - rect.top;
-  });
+  }, { passive: true });
 
   window.addEventListener('mouseleave', () => {
     mouse.x = null;
     mouse.y = null;
   });
 
-  const nodeCount = Math.min(Math.floor((width * height) / 18000), 55);
+  const nodeCount = Math.min(Math.floor((width * height) / 22000), 45);
   const nodes = [];
   const packets = [];
 
@@ -47,14 +50,13 @@ function initHeroNetworkCanvas() {
     nodes.push({
       x: Math.random() * width,
       y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.6,
-      vy: (Math.random() - 0.5) * 0.6,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5,
       radius: Math.random() * 2 + 1.5,
-      baseAlpha: Math.random() * 0.5 + 0.3
+      baseAlpha: Math.random() * 0.4 + 0.3
     });
   }
 
-  // Create periodic data packets pulsing between nodes
   function createPacket(fromNode, toNode) {
     packets.push({
       from: fromNode,
@@ -68,6 +70,8 @@ function initHeroNetworkCanvas() {
   let packetTimer = 0;
 
   function render() {
+    if (!isVisible) return;
+
     ctx.clearRect(0, 0, width, height);
 
     // Update and draw nodes
@@ -79,35 +83,34 @@ function initHeroNetworkCanvas() {
       if (n.x < 0 || n.x > width) n.vx *= -1;
       if (n.y < 0 || n.y > height) n.vy *= -1;
 
-      // Mouse influence
+      // Mouse influence (using squared distance for performance)
       if (mouse.x !== null) {
         const dx = mouse.x - n.x;
         const dy = mouse.y - n.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < mouse.radius) {
+        const distSq = dx * dx + dy * dy;
+        if (distSq < mouse.radiusSq && distSq > 0) {
+          const dist = Math.sqrt(distSq);
           const force = (mouse.radius - dist) / mouse.radius;
-          n.x -= (dx / dist) * force * 1.5;
-          n.y -= (dy / dist) * force * 1.5;
+          n.x -= (dx / dist) * force * 1.2;
+          n.y -= (dy / dist) * force * 1.2;
         }
       }
 
       ctx.beginPath();
       ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(124, 77, 255, ${n.baseAlpha})`;
-      ctx.shadowColor = '#7c4dff';
-      ctx.shadowBlur = 8;
+      ctx.fillStyle = `rgba(167, 139, 250, ${n.baseAlpha})`;
       ctx.fill();
-      ctx.shadowBlur = 0;
 
       // Connect nearby nodes
       for (let j = i + 1; j < nodes.length; j++) {
         const n2 = nodes[j];
         const dx = n.x - n2.x;
         const dy = n.y - n2.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
+        const distSq = dx * dx + dy * dy;
 
-        if (dist < 150) {
-          const alpha = (1 - dist / 150) * 0.22;
+        if (distSq < 22500) { // 150^2
+          const dist = Math.sqrt(distSq);
+          const alpha = (1 - dist / 150) * 0.2;
           ctx.beginPath();
           ctx.moveTo(n.x, n.y);
           ctx.lineTo(n2.x, n2.y);
@@ -115,8 +118,7 @@ function initHeroNetworkCanvas() {
           ctx.lineWidth = 1;
           ctx.stroke();
 
-          // Chance to trigger packet transfer along this edge
-          if (packetTimer % 40 === 0 && Math.random() < 0.05 && packets.length < 15) {
+          if (packetTimer % 45 === 0 && Math.random() < 0.04 && packets.length < 12) {
             createPacket(n, n2);
           }
         }
@@ -139,17 +141,28 @@ function initHeroNetworkCanvas() {
       ctx.beginPath();
       ctx.arc(px, py, 2.5, 0, Math.PI * 2);
       ctx.fillStyle = p.color;
-      ctx.shadowColor = p.color;
-      ctx.shadowBlur = 10;
       ctx.fill();
-      ctx.shadowBlur = 0;
     }
 
     packetTimer++;
     animationId = requestAnimationFrame(render);
   }
 
-  render();
+  // IntersectionObserver to pause loop when scrolled offscreen
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const wasVisible = isVisible;
+        isVisible = entry.isIntersecting;
+        if (isVisible && !wasVisible) {
+          animationId = requestAnimationFrame(render);
+        }
+      });
+    }, { threshold: 0.01 });
+    observer.observe(canvas);
+  }
+
+  animationId = requestAnimationFrame(render);
 }
 
 /* --------------------------------------------------------------------------
@@ -172,13 +185,12 @@ function initProductCarousel() {
 }
 
 /* --------------------------------------------------------------------------
-   1. Navbar & Mobile Menu
+   1. Navbar & Mobile Menu (Throttled & Smooth)
    -------------------------------------------------------------------------- */
 function initNavbar() {
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.querySelectorAll('.nav-link, .nav-mobile-cta a');
 
-  // Inject or retrieve backdrop element
   let backdrop = document.querySelector('.mobile-menu-backdrop');
   if (!backdrop) {
     backdrop = document.createElement('div');
@@ -214,94 +226,101 @@ function initNavbar() {
     backdrop.addEventListener('click', closeMobileMenu);
   }
 
-  // Close mobile menu on link click
   navLinks.forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
 
-  // Close on Escape key press
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && document.body.classList.contains('mobile-menu-open')) {
       closeMobileMenu();
     }
   });
 
-  // Reset menu on desktop resize
   window.addEventListener('resize', () => {
     if (window.innerWidth > 768 && document.body.classList.contains('mobile-menu-open')) {
       closeMobileMenu();
     }
-  });
+  }, { passive: true });
 
-  // Highlight active section on scroll
+  // Highlight active section on scroll with rAF throttling
   const sections = document.querySelectorAll('section[id]');
   if (sections.length > 0) {
+    let ticking = false;
+
     window.addEventListener('scroll', () => {
-      const scrollY = window.pageYOffset;
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollY = window.pageYOffset;
 
-      sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 120;
-        const sectionId = current.getAttribute('id');
-        const navLink = document.querySelector(`.nav-link[href*="${sectionId}"]`);
+          sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 120;
+            const sectionId = current.getAttribute('id');
+            const navLink = document.querySelector(`.nav-link[href*="${sectionId}"]`);
 
-        if (navLink) {
-          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            navLink.classList.add('active');
-          } else {
-            navLink.classList.remove('active');
-          }
-        }
-      });
-    });
+            if (navLink) {
+              if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                navLink.classList.add('active');
+              } else {
+                navLink.classList.remove('active');
+              }
+            }
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
   }
 }
 
 /* --------------------------------------------------------------------------
-   2. Live Radar & Signal Waveform Canvas
+   2. Live Radar & Signal Waveform Canvas (Zero Layout Thrashing)
    -------------------------------------------------------------------------- */
 function initSignalCanvas() {
   const canvas = document.getElementById('signalCanvas');
   if (!canvas) return;
 
-  const ctx = canvas.getContext('2d');
-  let animationFrameId;
-  let width, height;
+  const ctx = canvas.getContext('2d', { alpha: true });
+  let animationFrameId = null;
+  let isVisible = true;
+  let w = 350, h = 220;
 
   function resize() {
     const rect = canvas.getBoundingClientRect();
-    width = canvas.width = rect.width * (window.devicePixelRatio || 1);
-    height = canvas.height = rect.height * (window.devicePixelRatio || 1);
-    ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
+    w = rect.width;
+    h = rect.height;
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = w * dpr;
+    canvas.height = h * dpr;
+    ctx.scale(dpr, dpr);
   }
 
-  window.addEventListener('resize', resize);
+  window.addEventListener('resize', resize, { passive: true });
   resize();
 
   let phase = 0;
   const particles = [];
-  const particleCount = 28;
+  const particleCount = 24;
 
-  // Initialize signal particles
   for (let i = 0; i < particleCount; i++) {
     particles.push({
-      x: Math.random() * (canvas.getBoundingClientRect().width || 350),
-      y: Math.random() * (canvas.getBoundingClientRect().height || 220),
+      x: Math.random() * w,
+      y: Math.random() * h,
       radius: Math.random() * 2 + 1,
       speedX: (Math.random() - 0.5) * 0.8,
       speedY: (Math.random() - 0.5) * 0.8,
-      alpha: Math.random() * 0.6 + 0.2
+      alpha: Math.random() * 0.5 + 0.2
     });
   }
 
   function draw() {
-    const w = canvas.getBoundingClientRect().width;
-    const h = canvas.getBoundingClientRect().height;
+    if (!isVisible) return;
 
     ctx.clearRect(0, 0, w, h);
 
     // Draw Grid Lines
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.04)';
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.03)';
     ctx.lineWidth = 1;
     for (let x = 0; x < w; x += 30) {
       ctx.beginPath();
@@ -318,36 +337,32 @@ function initSignalCanvas() {
 
     // Draw Primary Signal Waveform
     ctx.beginPath();
-    ctx.lineWidth = 2.5;
+    ctx.lineWidth = 2;
     ctx.strokeStyle = '#a78bfa';
-    ctx.shadowColor = '#7c4dff';
-    ctx.shadowBlur = 14;
 
-    for (let x = 0; x < w; x++) {
-      const y = h / 2 + 
-        Math.sin((x * 0.02) + phase) * 28 * Math.sin(phase * 0.5) +
-        Math.cos((x * 0.04) - phase * 1.5) * 12;
+    for (let x = 0; x < w; x += 2) {
+      const y = h / 2 +
+        Math.sin((x * 0.02) + phase) * 26 * Math.sin(phase * 0.5) +
+        Math.cos((x * 0.04) - phase * 1.5) * 10;
       if (x === 0) ctx.moveTo(x, y);
       else ctx.lineTo(x, y);
     }
     ctx.stroke();
 
-    // Reset shadow
-    ctx.shadowBlur = 0;
-
     // Draw Secondary Echo Waveform
     ctx.beginPath();
     ctx.lineWidth = 1.5;
-    ctx.strokeStyle = 'rgba(56, 189, 248, 0.6)';
-    for (let x = 0; x < w; x++) {
-      const y = h / 2 + Math.sin((x * 0.015) - phase * 0.8) * 36;
+    ctx.strokeStyle = 'rgba(56, 189, 248, 0.5)';
+    for (let x = 0; x < w; x += 2) {
+      const y = h / 2 + Math.sin((x * 0.015) - phase * 0.8) * 32;
       if (x === 0) ctx.moveTo(x, y);
       else ctx.lineTo(x, y);
     }
     ctx.stroke();
 
     // Draw & Update Particles
-    particles.forEach(p => {
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
       p.x += p.speedX;
       p.y += p.speedY;
 
@@ -360,13 +375,27 @@ function initSignalCanvas() {
       ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(167, 139, 250, ${p.alpha})`;
       ctx.fill();
-    });
+    }
 
-    phase += 0.035;
+    phase += 0.03;
     animationFrameId = requestAnimationFrame(draw);
   }
 
-  draw();
+  // IntersectionObserver to pause loop when scrolled offscreen
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const wasVisible = isVisible;
+        isVisible = entry.isIntersecting;
+        if (isVisible && !wasVisible) {
+          animationFrameId = requestAnimationFrame(draw);
+        }
+      });
+    }, { threshold: 0.01 });
+    observer.observe(canvas);
+  }
+
+  animationFrameId = requestAnimationFrame(draw);
 }
 
 /* --------------------------------------------------------------------------
