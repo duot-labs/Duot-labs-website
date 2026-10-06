@@ -4,7 +4,7 @@
 > High-performance AI growth systems & advertising intelligence for ambitious teams, alongside proprietary decision software.
 
 Live URL: [https://duotlabs.com/](https://duotlabs.com/)  
-Repository: [https://github.com/Ritabanm/Duot-labs-website](https://github.com/duot-labs/Duot-labs-website)
+Repository: [https://github.com/duot-labs/Duot-labs-website](https://github.com/duot-labs/Duot-labs-website)
 
 ---
 
