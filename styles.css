@@ -1056,24 +1056,29 @@ body.mobile-menu-open .nav-toggle-icon span:nth-child(3) {
   background: rgba(14, 12, 28, 0.9);
   border-top: 1px solid var(--border-glass);
   border-bottom: 1px solid var(--border-glass);
-  padding: 16px 0;
+  padding: 14px 0;
   overflow: hidden;
   position: relative;
   z-index: 2;
 }
 
+.ticker-strip:hover .ticker-track {
+  animation-play-state: paused;
+}
+
 .ticker-track {
   display: flex;
-  gap: 48px;
+  gap: 0;
   white-space: nowrap;
-  animation: ticker-scroll 35s linear infinite;
+  animation: ticker-scroll 38s linear infinite;
   width: max-content;
 }
 
 .ticker-item {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+  padding-right: 14px;
   font-family: var(--font-mono);
   font-size: 0.85rem;
   color: var(--text-secondary);
@@ -1081,6 +1086,25 @@ body.mobile-menu-open .nav-toggle-icon span:nth-child(3) {
 
 .ticker-item b {
   color: #c4b5fd;
+}
+
+.ticker-app {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.ticker-app-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  vertical-align: middle;
 }
 
 .ticker-sep {
@@ -1712,6 +1736,21 @@ body.mobile-menu-open .nav-toggle-icon span:nth-child(3) {
   font-size: 0.75rem;
   color: #c4b5fd;
   margin-bottom: 18px;
+}
+
+.product-btn-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  width: 100%;
+}
+
+.product-btn-grid .btn {
+  padding: 11px 8px;
+  font-size: 0.86rem;
+  width: 100%;
+  justify-content: center;
+  gap: 6px;
 }
 
 .product-info-block {
