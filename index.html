@@ -71,31 +71,96 @@
     </div>
   </header>
 
-  <!-- Hero Section (Clean & Minimal with Dynamic Ambient Canvas) -->
-  <section class="hero-section">
-    <div class="hero-bg-media" aria-hidden="true">
-      <canvas id="heroNetworkCanvas" class="hero-network-canvas"></canvas>
-      <div class="hero-video-overlay"></div>
-    </div>
-    <div class="container hero-centered">
-      <div class="hero-pill">
-        <span>00 // SYSTEMS RESEARCH STUDIO</span>
+  <!-- Hero Section: Clear Value Proposition + Interactive 3D Systems Architecture Console -->
+  <section class="hero-section" id="heroSection">
+    <div class="container hero-grid-container">
+      <!-- Left Column: Clear Business Identity & How It All Connects -->
+      <div class="hero-content-col">
+        <div class="hero-pill">
+          <span>00 // SYSTEMS INFRASTRUCTURE, CONSULTING & PRODUCTS</span>
+        </div>
+        <h1 class="hero-title">
+          We build systems,<br />
+          advise companies, and <span class="gradient-text-purple">ship software.</span>
+        </h1>
+        <p class="hero-desc">
+          Duot Labs is an independent studio. We research computing speed and memory efficiency, help companies fix tracking and data infrastructure, and build our own consumer and spatial apps.
+        </p>
+
+        <!-- 3 Pillars -->
+        <div class="hero-pillars-overview">
+          <div class="pillar-overview-chip">
+            <span class="chip-step-badge">01</span>
+            <div class="chip-content">
+              <span class="chip-title">Systems & AI Research</span>
+              <span class="chip-sub">GPU compute, latency, and memory optimization</span>
+            </div>
+          </div>
+          <div class="pillar-overview-chip">
+            <span class="chip-step-badge">02</span>
+            <div class="chip-content">
+              <span class="chip-title">Technical Consulting</span>
+              <span class="chip-sub">Server-side tracking (CAPI) & marketing automation</span>
+            </div>
+          </div>
+          <div class="pillar-overview-chip">
+            <span class="chip-step-badge">03</span>
+            <div class="chip-content">
+              <span class="chip-title">Software Products</span>
+              <span class="chip-sub">Independent consumer apps across iOS, web, and XR</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-cta-group">
+          <a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+            Schedule 30-Min Call
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+          <a href="#focusSection" class="btn btn-secondary btn-lg">
+            Explore Work
+          </a>
+        </div>
       </div>
-      <h1 class="hero-title">
-        Infrastructure that <em>performs.</em><br />
-        Systems that <span class="gradient-text-purple">scale.</span>
-      </h1>
-      <p class="hero-desc">
-        Duot Labs is an independent research studio building systems infrastructure for high-performance computing and artificial intelligence. We focus on hardware-software co-design, memory and caching runtimes, and high-throughput execution engines.
-      </p>
-      <div class="hero-cta-group">
-        <a href="https://calendly.com/info-duotlabs/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-          Schedule 30-Min Call
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-        </a>
-        <a href="research.html" class="btn btn-secondary btn-lg">
-          Explore Research
-        </a>
+
+      <!-- Right Column: Interactive 3D Silicon Console (Clean & Minimal) -->
+      <div class="hero-systems-col">
+        <div class="systems-console-frame">
+          <!-- Terminal Header Bar -->
+          <div class="console-header-bar">
+            <div class="console-dots">
+              <span class="dot-red"></span>
+              <span class="dot-yellow"></span>
+              <span class="dot-green"></span>
+            </div>
+            <div class="console-title-mono">
+              <span class="hud-pulse-dot"></span>
+              <span>SILICON TOPOLOGY</span>
+            </div>
+            <div class="console-drag-hint">DRAG TO ROTATE</div>
+          </div>
+
+          <!-- 3D WebGL Silicon & Memory Viewport (No overlapping text tags) -->
+          <div class="console-viewport" id="consoleViewport">
+            <canvas id="heroThreeCanvas" class="hero-three-canvas"></canvas>
+            <canvas id="heroNetworkCanvas" class="hero-network-canvas" style="display: none;"></canvas>
+          </div>
+
+          <!-- Console Bottom Controls: Clean 3-Mode Toggle -->
+          <div class="console-bottom-bar">
+            <div class="console-layer-tabs" role="tablist">
+              <button type="button" class="console-tab-btn active" data-core-mode="neural">
+                Compute
+              </button>
+              <button type="button" class="console-tab-btn" data-core-mode="rings">
+                Memory
+              </button>
+              <button type="button" class="console-tab-btn" data-core-mode="quantum">
+                Full System
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -103,77 +168,79 @@
   <!-- Live Ticker Strip -->
   <div class="ticker-strip" aria-hidden="true">
     <div class="ticker-track">
-      <div class="ticker-item"><span>// RESEARCH</span> <span class="ticker-sep">●</span> <b>HARDWARE-SOFTWARE CO-DESIGN & TRITON/CUDA KERNELS</b></div>
-      <div class="ticker-item"><span>// MEMORY RUNTIMES</span> <span class="ticker-sep">●</span> <b>KV-CACHE COMPRESSION & ZERO-COPY DATA LAYOUTS</b></div>
-      <div class="ticker-item"><span>// EXECUTION ENGINES</span> <span class="ticker-sep">●</span> <b>P99 TAIL-LATENCY SUPPRESSION & HIGH-THROUGHPUT INFERENCE</b></div>
-      <div class="ticker-item"><span>// PRODUCTS</span> <span class="ticker-sep">●</span> <b>TECTONIC, MARQUE, BARGANE, PRICESCOUTER, NEURAHABIT & IMPERICAL</b></div>
-      <div class="ticker-item"><span>// RESEARCH</span> <span class="ticker-sep">●</span> <b>HARDWARE-SOFTWARE CO-DESIGN & TRITON/CUDA KERNELS</b></div>
-      <div class="ticker-item"><span>// MEMORY RUNTIMES</span> <span class="ticker-sep">●</span> <b>KV-CACHE COMPRESSION & ZERO-COPY DATA LAYOUTS</b></div>
-      <div class="ticker-item"><span>// EXECUTION ENGINES</span> <span class="ticker-sep">●</span> <b>P99 TAIL-LATENCY SUPPRESSION & HIGH-THROUGHPUT INFERENCE</b></div>
-      <div class="ticker-item"><span>// PRODUCTS</span> <span class="ticker-sep">●</span> <b>TECTONIC, MARQUE, BARGANE, PRICESCOUTER, NEURAHABIT & IMPERICAL</b></div>
+      <div class="ticker-item"><span>// DUOT LABS</span> <span class="ticker-sep">●</span> <b>SYSTEMS & AI RESEARCH</b> <span class="ticker-sep">●</span> <b>TECHNICAL CONSULTING</b> <span class="ticker-sep">●</span> <b>SHIPPED PRODUCTS</b> <span class="ticker-sep">●</span> <b>TECTONIC</b> <span class="ticker-sep">●</span> <b>MARQUE</b> <span class="ticker-sep">●</span> <b>BARGANE</b> <span class="ticker-sep">●</span> <b>PRICESCOUTER</b> <span class="ticker-sep">●</span> <b>IMPERICAL</b></div>
+      <div class="ticker-item"><span>// DUOT LABS</span> <span class="ticker-sep">●</span> <b>SYSTEMS & AI RESEARCH</b> <span class="ticker-sep">●</span> <b>TECHNICAL CONSULTING</b> <span class="ticker-sep">●</span> <b>SHIPPED PRODUCTS</b> <span class="ticker-sep">●</span> <b>TECTONIC</b> <span class="ticker-sep">●</span> <b>MARQUE</b> <span class="ticker-sep">●</span> <b>BARGANE</b> <span class="ticker-sep">●</span> <b>PRICESCOUTER</b> <span class="ticker-sep">●</span> <b>IMPERICAL</b></div>
     </div>
   </div>
 
-  <!-- What We Do: 3 Core Pillars -->
-  <section class="section">
+  <!-- What We Do: 3 Core Areas of Focus -->
+  <section class="section" id="focusSection">
     <div class="container">
       <div class="section-header">
         <div class="section-pill">WHAT WE DO</div>
-        <h2 class="section-title">Built for speed, precision, <span class="gradient-text-purple">& utility.</span></h2>
+        <h2 class="section-title">Three areas of <span class="gradient-text-purple">focus.</span></h2>
         <p class="section-desc">
-          Three focused pillars spanning systems research, growth engineering, and research-backed software products.
+          Our work spans systems research, technical consulting for businesses, and our own software products.
         </p>
       </div>
 
-      <div class="grid-3">
-        <!-- 01: Research & Systems -->
-        <div class="feature-card">
-          <div class="card-header-icon">
-            <span class="card-code">PILLAR 01</span>
-            <div class="icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+      <div class="ecosystem-flow-wrapper">
+        <div class="ecosystem-cards-grid">
+          <!-- 01: Research & Systems -->
+          <div class="ecosystem-card feature-card">
+            <div>
+              <span class="card-step-badge step-badge-blue">01 // SYSTEMS & RESEARCH</span>
+              <h3 class="ecosystem-card-title">Systems & AI Research</h3>
+              <p class="ecosystem-card-plain-desc">
+                We research computing efficiency and execution speed—optimizing GPU memory bandwidth, reducing inference latency, and making AI workloads run with lower resource usage.
+              </p>
+              <ul class="feature-bullets" style="margin-bottom: 20px;">
+                <li class="feature-bullet-item"><span class="bullet-check">✓</span> Custom GPU kernels for low-latency AI execution</li>
+                <li class="feature-bullet-item"><span class="bullet-check">✓</span> Memory caching and data transfer efficiency</li>
+                <li class="feature-bullet-item"><span class="bullet-check">✓</span> Sub-15ms real-time response runtimes</li>
+              </ul>
+            </div>
+            <div class="ecosystem-card-footer">
+              <a href="research.html" class="btn btn-outline-lime btn-sm">Explore Research →</a>
             </div>
           </div>
-          <h3 class="card-title">Research & Systems</h3>
-          <p class="card-desc">
-            Systems infrastructure targeting core compute bottlenecks: hardware-software co-design, memory & caching runtimes, and high-throughput execution engines.
-          </p>
-          <div class="card-footer" style="margin-top: auto; padding-top: 20px;">
-            <a href="research.html" class="btn btn-outline-lime btn-sm">Explore Research →</a>
-          </div>
-        </div>
 
-        <!-- 02: Technical Consulting -->
-        <div class="feature-card">
-          <div class="card-header-icon">
-            <span class="card-code">PILLAR 02</span>
-            <div class="icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <!-- 02: Technical Consulting -->
+          <div class="ecosystem-card feature-card">
+            <div>
+              <span class="card-step-badge step-badge-emerald">02 // TECHNICAL CONSULTING</span>
+              <h3 class="ecosystem-card-title">Technical Consulting</h3>
+              <p class="ecosystem-card-plain-desc">
+                We help growth-stage companies set up reliable tracking and marketing data infrastructure. We implement server-side conversion tracking (Meta CAPI & Google), resolve attribution loss, and build automated workflows.
+              </p>
+              <ul class="feature-bullets" style="margin-bottom: 20px;">
+                <li class="feature-bullet-item"><span class="bullet-check">✓</span> Server-side tracking (Meta CAPI, Google Enhanced Conversions)</li>
+                <li class="feature-bullet-item"><span class="bullet-check">✓</span> Cookieless first-party event matching</li>
+                <li class="feature-bullet-item"><span class="bullet-check">✓</span> Automated marketing alerts and tooling</li>
+              </ul>
+            </div>
+            <div class="ecosystem-card-footer">
+              <a href="consulting.html" class="btn btn-outline-lime btn-sm">Explore Consulting →</a>
             </div>
           </div>
-          <h3 class="card-title">Technical Consulting</h3>
-          <p class="card-desc">
-            Server-side CAPI tracking, custom marketing automation tooling, organic creator pipelines, and rapid creative hook testing for growth teams.
-          </p>
-          <div class="card-footer" style="margin-top: auto; padding-top: 20px;">
-            <a href="consulting.html" class="btn btn-outline-lime btn-sm">Explore Consulting →</a>
-          </div>
-        </div>
 
-        <!-- 03: Research-Backed Products -->
-        <div class="feature-card">
-          <div class="card-header-icon">
-            <span class="card-code">PILLAR 03</span>
-            <div class="icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          <!-- 03: Shipped Products -->
+          <div class="ecosystem-card feature-card">
+            <div>
+              <span class="card-step-badge step-badge-purple">03 // SOFTWARE PRODUCTS</span>
+              <h3 class="ecosystem-card-title">Software Products</h3>
+              <p class="ecosystem-card-plain-desc">
+                We design, build, and operate independent software products across iOS, web, and XR. Each application addresses a focused need in communication, creator discovery, pricing, or spatial intelligence.
+              </p>
+              <ul class="feature-bullets" style="margin-bottom: 20px;">
+                <li class="feature-bullet-item"><span class="bullet-check">✓</span> Consumer mobile apps (Bargane, PriceScouter, NeuraHabit)</li>
+                <li class="feature-bullet-item"><span class="bullet-check">✓</span> Web platforms (Marque creator discovery)</li>
+                <li class="feature-bullet-item"><span class="bullet-check">✓</span> Spatial XR software (Tectonic, Imperical)</li>
+              </ul>
             </div>
-          </div>
-          <h3 class="card-title">Research-Backed Products</h3>
-          <p class="card-desc">
-            We build and ship focused tools founded on research: Tectonic, Marque, Bargane, PriceScouter AI, NeuraHabit, and Imperical across web, spatial, and Apple platforms.
-          </p>
-          <div class="card-footer" style="margin-top: auto; padding-top: 20px;">
-            <a href="products.html" class="btn btn-outline-lime btn-sm">View All Products →</a>
+            <div class="ecosystem-card-footer">
+              <a href="products.html" class="btn btn-outline-lime btn-sm">Explore Products →</a>
+            </div>
           </div>
         </div>
       </div>
@@ -212,16 +279,7 @@
                 <h3 class="product-card-name">Tectonic</h3>
                 <span class="product-type-tag">XR / SPATIAL SAAS</span>
               </div>
-              <div class="product-info-block">
-                <div class="info-row">
-                  <span class="info-label">What it does:</span>
-                  <p class="info-text">Spatial digital twins and autonomous AI agents for brick-and-mortar SMBs captured via Meta XR hardware.</p>
-                </div>
-                <div class="info-row" style="margin-top: 6px;">
-                  <span class="info-label">Why it exists:</span>
-                  <p class="info-text">Empowers retail and hospitality operators to optimize foot-traffic flow, merchandising, and spatial configurations.</p>
-                </div>
-              </div>
+              <p class="product-card-desc">Spatial digital twins and autonomous AI agents for physical spaces and brick-and-mortar operations, captured with Meta XR hardware.</p>
             </div>
             <div>
               <div class="btn btn-secondary" style="width: 100%; opacity: 0.75; cursor: default; justify-content: center; pointer-events: none;">
@@ -238,16 +296,7 @@
                 <h3 class="product-card-name">Marque</h3>
                 <span class="product-type-tag">WEB PLATFORM</span>
               </div>
-              <div class="product-info-block">
-                <div class="info-row">
-                  <span class="info-label">What it does:</span>
-                  <p class="info-text">Automated semantic talent scouting and assisted creator outreach for growth brands.</p>
-                </div>
-                <div class="info-row" style="margin-top: 6px;">
-                  <span class="info-label">Why it exists:</span>
-                  <p class="info-text">Eliminates manual DM grinding so marketing teams can scale high-performing UGC partnerships fast.</p>
-                </div>
-              </div>
+              <p class="product-card-desc">Automated semantic talent discovery and assisted creator outreach platform for high-growth consumer brands.</p>
             </div>
             <div>
               <a href="https://marque.live/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
@@ -257,7 +306,7 @@
             </div>
           </div>
 
-          <!-- 2. Bargane -->
+          <!-- 3. Bargane -->
           <div class="product-scroll-card">
             <div>
               <img src="assets/bargane.jpg" alt="Bargane App Icon" class="product-app-icon" />
@@ -265,16 +314,7 @@
                 <h3 class="product-card-name">Bargane</h3>
                 <span class="product-type-tag">IOS APP</span>
               </div>
-              <div class="product-info-block">
-                <div class="info-row">
-                  <span class="info-label">What it does:</span>
-                  <p class="info-text">Your 24/7 personal AI communication and speech coach providing real-time voice feedback.</p>
-                </div>
-                <div class="info-row" style="margin-top: 6px;">
-                  <span class="info-label">Why it exists:</span>
-                  <p class="info-text">Gives founders and professionals judgment-free, honest practice to master high-stakes conversations.</p>
-                </div>
-              </div>
+              <p class="product-card-desc">Real-time AI voice and speech coaching app for practicing high-stakes conversations and communication skills.</p>
             </div>
             <div>
               <a href="https://apps.apple.com/us/app/bargane/id6760089931" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
@@ -284,7 +324,7 @@
             </div>
           </div>
 
-          <!-- 3. PriceScouter AI -->
+          <!-- 4. PriceScouter AI -->
           <div class="product-scroll-card">
             <div>
               <img src="assets/pricescouter.jpg" alt="PriceScouter AI App Icon" class="product-app-icon" />
@@ -292,16 +332,7 @@
                 <h3 class="product-card-name">PriceScouter AI</h3>
                 <span class="product-type-tag">IOS APP</span>
               </div>
-              <div class="product-info-block">
-                <div class="info-row">
-                  <span class="info-label">What it does:</span>
-                  <p class="info-text">Instant resale market value estimation and multi-store deal tracking from photos or search.</p>
-                </div>
-                <div class="info-row" style="margin-top: 6px;">
-                  <span class="info-label">Why it exists:</span>
-                  <p class="info-text">Stops buyers from overpaying and helps sellers price used electronics and items accurately.</p>
-                </div>
-              </div>
+              <p class="product-card-desc">Instant resale market value estimation and multi-store deal tracking from photo capture and live market search.</p>
             </div>
             <div>
               <a href="https://apps.apple.com/us/app/pricescouter-ai/id6749451027" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
@@ -311,7 +342,7 @@
             </div>
           </div>
 
-          <!-- 4. NeuraHabit -->
+          <!-- 5. NeuraHabit -->
           <div class="product-scroll-card">
             <div>
               <img src="assets/neurahabit.jpg" alt="NeuraHabit App Icon" class="product-app-icon" />
@@ -319,16 +350,7 @@
                 <h3 class="product-card-name">NeuraHabit</h3>
                 <span class="product-type-tag">IOS APP</span>
               </div>
-              <div class="product-info-block">
-                <div class="info-row">
-                  <span class="info-label">What it does:</span>
-                  <p class="info-text">Cognitive routine builder that turns small micro-actions into permanent everyday habits.</p>
-                </div>
-                <div class="info-row" style="margin-top: 6px;">
-                  <span class="info-label">Why it exists:</span>
-                  <p class="info-text">Replaces rigid streak pressure with behavioral psychology so self-improvement habits actually stick.</p>
-                </div>
-              </div>
+              <p class="product-card-desc">Cognitive routine builder that turns small micro-actions into durable everyday habits using behavioral psychology.</p>
             </div>
             <div>
               <a href="https://apps.apple.com/us/app/neurahabit/id6757574461" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
@@ -338,7 +360,7 @@
             </div>
           </div>
 
-          <!-- 5. Imperical -->
+          <!-- 6. Imperical -->
           <div class="product-scroll-card">
             <div>
               <img src="assets/imperical.jpg" alt="Imperical App Icon" class="product-app-icon" />
@@ -346,16 +368,7 @@
                 <h3 class="product-card-name">Imperical</h3>
                 <span class="product-type-tag">VISION / IOS</span>
               </div>
-              <div class="product-info-block">
-                <div class="info-row">
-                  <span class="info-label">What it does:</span>
-                  <p class="info-text">Immersive virtual reality science education simulations for K-12 students.</p>
-                </div>
-                <div class="info-row" style="margin-top: 6px;">
-                  <span class="info-label">Why it exists:</span>
-                  <p class="info-text">Makes abstract physics, biology, and chemistry concepts tangible through interactive 3D spatial learning.</p>
-                </div>
-              </div>
+              <p class="product-card-desc">Interactive virtual reality science education simulations for spatial computing headsets and visionOS.</p>
             </div>
             <div>
               <a href="https://apps.apple.com/us/app/imperical/id6759636738" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
@@ -483,7 +496,8 @@
     </div>
   </div>
 
-  <!-- Main JavaScript File -->
+  <!-- Three.js 3D Engine & Main JavaScript File -->
+  <script src="assets/vendor/three.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

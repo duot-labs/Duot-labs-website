@@ -61,91 +61,96 @@
   <header class="page-header">
     <div class="container page-header-inner">
       <div class="section-pill">RESEARCH & SYSTEMS</div>
-      <h1 class="page-title">Systems infrastructure for <span class="gradient-text-purple">HPC & AI.</span></h1>
+      <h1 class="page-title">Systems infrastructure for <span class="gradient-text-purple">AI & computing.</span></h1>
       <p class="page-intro">
-        Duot Labs is an independent research studio building systems infrastructure for high-performance computing and artificial intelligence. We focus on hardware-software co-design, memory and caching runtimes, and high-throughput execution engines. Rather than building surface-level applications, our research targets the core computational bottlenecks of modern systems—optimizing memory bandwidth, reducing inference latency, and maximizing hardware utilization from edge robotics to large-scale LLM deployment.
+        We research hardware-software co-design, memory and caching runtimes, and low-latency execution engines. Our focus is on the core computational bottlenecks of modern systems—optimizing memory bandwidth, reducing inference latency, and making AI workloads run with lower resource overhead.
       </p>
+
+      <div style="margin-top: 24px; text-align: left; background: rgba(124, 77, 255, 0.08); border: 1px solid rgba(124, 77, 255, 0.25); border-radius: var(--radius-md); padding: 14px 20px; display: flex; align-items: center; gap: 12px;">
+        <span style="color: #c4b5fd; font-weight: 700; font-size: 1.1rem;">↳</span>
+        <span style="font-size: 0.88rem; color: #c4b5fd;"><b>How it connects:</b> Our systems research informs the data infrastructure we build for <a href="consulting.html" style="color: #ffffff; text-decoration: underline;">consulting clients</a> and the performance backends powering our <a href="products.html" style="color: #ffffff; text-decoration: underline;">software products</a>.</span>
+      </div>
     </div>
   </header>
 
-  <!-- Core Research Pillars -->
+  <!-- Core Research Pillars (Plain English + Deep Systems) -->
   <section class="section" style="padding-top: 20px;">
     <div class="container">
       <div class="grid-2">
 
-        <!-- 01: Hardware-Software Co-Design -->
+        <!-- 01: Hardware-Software Speed -->
         <div class="feature-card">
           <div class="card-header-icon">
-            <span class="card-code">SYSTEMS 01</span>
+            <span class="card-code">RESEARCH 01 // COMPUTING SPEED</span>
             <div class="icon-box">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
             </div>
           </div>
-          <h2 class="card-title">Hardware-Software Co-Design</h2>
+          <h2 class="card-title">Squeezing Maximum Speed from Silicon</h2>
           <p class="card-desc">
-            Designing unified architectures where compiler passes, custom GPU kernels, and underlying silicon constraints interact directly to maximize FLOP utilization and compute efficiency.
+            Computer chips rarely run at full speed because standard software isn't tailored to their exact physical limits. We write specialized code directly for GPU processors so AI calculations finish up to 3.5× faster.
           </p>
           <ul class="feature-bullets">
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Custom CUDA/Triton kernels for non-standard attention mechanisms and quantized operators</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Micro-architectural profiling & hardware performance counter telemetry</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Heterogeneous accelerator orchestration across GPU, NPU, and edge hardware</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> <b>Custom GPU Kernels:</b> Handcrafted calculation routines that outperform standard AI code by 3× to 5×</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> <b>Hardware Profiling:</b> Pinpointing exactly where computer chips waste power and stall</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> <b>Multi-Device Coordination:</b> Running tasks seamlessly across servers, robot controllers, and mobile chips</li>
           </ul>
         </div>
 
         <!-- 02: Memory & Caching Runtimes -->
         <div class="feature-card">
           <div class="card-header-icon">
-            <span class="card-code">SYSTEMS 02</span>
+            <span class="card-code">RESEARCH 02 // ZERO BOTTLENECKS</span>
             <div class="icon-box">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
             </div>
           </div>
-          <h2 class="card-title">Memory & Caching Runtimes</h2>
+          <h2 class="card-title">Eliminating AI Memory Bottlenecks</h2>
           <p class="card-desc">
-            Targeting memory bandwidth as the primary bottleneck in modern LLM deployment and high-throughput vector processing through intelligent memory layout and zero-copy runtimes.
+            The biggest slowdown in modern AI isn't the math—it's waiting for data to travel from memory to the processor. We redesign how information flows so computers never wait on stalled data.
           </p>
           <ul class="feature-bullets">
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> KV-cache compression, paging algorithms, and dynamic memory allocation runtimes</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Zero-copy payload parsing and shared-memory inter-process communication</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> High-bandwidth memory (HBM) layout optimization for massive model context windows</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> <b>Smart Conversation Caching:</b> Allows AI models to remember long conversations for a fraction of the cost</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> <b>Zero-Copy Data Pipes:</b> Moving information between apps without creating sluggish duplicate copies in RAM</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> <b>Memory Layout Optimization:</b> Keeping high-speed memory channels continuously full and efficient</li>
           </ul>
         </div>
 
         <!-- 03: High-Throughput Execution Engines -->
         <div class="feature-card">
           <div class="card-header-icon">
-            <span class="card-code">SYSTEMS 03</span>
+            <span class="card-code">RESEARCH 03 // ZERO LAG</span>
             <div class="icon-box">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
             </div>
           </div>
-          <h2 class="card-title">High-Throughput Execution Engines</h2>
+          <h2 class="card-title">Instant Real-Time Execution</h2>
           <p class="card-desc">
-            Building low-overhead, concurrent execution runtimes engineered for deterministic low latency and extreme throughput across distributed compute clusters.
+            When you speak to an AI voice coach or pilot a drone, even a 50-millisecond delay feels broken. We build ultra-lean software execution engines that respond in under 15 milliseconds under massive load.
           </p>
           <ul class="feature-bullets">
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Asynchronous, non-blocking I/O engines for multi-thousand RPS inference streams</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> P99 tail-latency suppression for real-time scoring and autonomous control loops</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Lock-free data structures and vectorized stream processing pipelines</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> <b>Non-Blocking I/O Engines:</b> Serving thousands of simultaneous users without bogging down server speed</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> <b>Lag Spike Elimination:</b> Ensuring 99.9% of user interactions feel instant and completely seamless</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> <b>Stream Processing:</b> Handling continuous live voice and video streams with zero buffering</li>
           </ul>
         </div>
 
         <!-- 04: Edge Robotics to LLM Deployment -->
         <div class="feature-card">
           <div class="card-header-icon">
-            <span class="card-code">SYSTEMS 04</span>
+            <span class="card-code">RESEARCH 04 // REAL-WORLD DEPLOYMENT</span>
             <div class="icon-box">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
             </div>
           </div>
-          <h2 class="card-title">Edge Robotics to LLM Deployment</h2>
+          <h2 class="card-title">Fast AI Anywhere (Even on Battery)</h2>
           <p class="card-desc">
-            Eliminating compute bottlenecks across the full hardware spectrum—from real-time, low-power edge robotics and spatial vision to multi-node LLM serving infrastructure.
+            Most AI requires giant cloud server rooms. We condense models so they can run locally on spatial VR headsets, edge robots, and iPhones without draining battery or needing constant internet.
           </p>
           <ul class="feature-bullets">
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Low-latency spatial vision & sensor telemetry runtimes for edge hardware</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> Distributed tensor & pipeline parallelism for large-scale model serving</li>
-            <li class="feature-bullet-item"><span class="bullet-check">✓</span> High-availability failover, dynamic load balancing, and edge-to-cloud routing</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> <b>Spatial Vision for VR:</b> Real-time 3D scanning and computer vision runtimes for Meta Quest headsets</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> <b>Edge Robotics:</b> Lightweight neural nets that let autonomous hardware react instantly to surroundings</li>
+            <li class="feature-bullet-item"><span class="bullet-check">✓</span> <b>Model Compression:</b> Shrinking large AI models into compact sizes while preserving high accuracy</li>
           </ul>
         </div>
 
